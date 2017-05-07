@@ -5,7 +5,7 @@
 */
 body {
 	background-color: #165F88;
-	background-image: url("https://cdn.rawgit.com/Squibs/freeCodeCamp/79ab8ae5/Images/vector-lighthouse.svg");
+	background-image: url("img/vector-lighthouse.svg");
 	background-repeat: no-repeat;
 	background-position: center calc(50% - 6em);
 	background-attachment: fixed;
