@@ -8,3 +8,8 @@ Keywords: Bootstrap, jQuery, CSS
 
  	* Learned a lesson in the difference between container and container-fluid
  		important take-away being container-fluid extends to the edges, while container is contained and does not 
+
+ 	* Making things work for mobile is terrible.
+ 		Use em scaling everywhere in css.
+ 		Use height: 100%; in the same section as a fixed background image for mobile
+ 		@media queries as breakpoints for different screen resolutions
