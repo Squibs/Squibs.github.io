@@ -5,7 +5,7 @@
 */
 body {
 	background-color: #165F88;
-	background-image: url("img/vector-lighthouse.svg");
+	background-image: url("../img/vector-lighthouse.svg");
 	background-repeat: no-repeat;
 	background-position: center calc(50% - 6em);
 	background-attachment: fixed;
@@ -33,6 +33,7 @@ nav {
 	top: 10vh;
 	text-shadow: 0 0 0.45em black;
 	color: white;
+	z-index: 10000;
 }
 
 h1 {
@@ -230,8 +231,4 @@ h5 {
       display: block;
       width: 100%;
     }	
-
-    .home {
-    	z-index: 10000;
-    }
 }
