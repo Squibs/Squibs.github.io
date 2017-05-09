@@ -10,13 +10,14 @@
 
 		<link rel="stylesheet" href="css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="css/normalize.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 		<link rel="stylesheet" type="text/css" href="css/main.css"/>
 		<link rel="shortcut icon" href="favicon.ico">
-
 	</head>
 
 	<body>
-		<nav class="navbar fixed-top navbar-toggleable-sm navbar-light"> <!--#DBF1FF-->
+		<nav class="navbar fixed-top navbar-toggleable-sm navbar-light">
+
 			<!-- button for navbar collapse at medium breakpoint -->
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -57,134 +58,328 @@
 					<p>
 						Etiam feugiat, lacus quis luctus iaculis, elit erat tempus enim, sit amet ultricies lorem mauris eget libero. Vivamus rhoncus vel enim eget tempus. Morbi tortor sapien, congue in urna eu, feugiat tincidunt mauris. Nam at elit auctor, pulvinar sem vitae, rhoncus nunc. Proin egestas egestas tellus, eget placerat augue luctus sed. Praesent magna massa, auctor eget posuere ornare, pharetra eu arcu. Integer consequat nisl eget porta dignissim. Morbi nec ex ac mi malesuada auctor scelerisque ac lectus. Sed facilisis tellus a sagittis malesuada. In justo lectus, tristique sit amet egestas eget, ultricies pulvinar turpis. Sed feugiat, erat quis hendrerit finibus, diam dui ornare ipsum, non sagittis risus turpis ac lacus. Vivamus id augue neque. Ut eget cursus urna. Vestibulum fringilla, metus porttitor egestas ultrices, urna elit ultrices tortor, sit amet convallis erat enim eleifend sem. Mauris vitae consectetur lectus, in condimentum tellus.
 					</p>
-				</div>
+				</div> <!-- end #About .col -->
+			</div> <!-- end #About .row -->
 
+			<div class="row">
 				<div class="projects col-sm-12" id="Projects">
-					<h3>Projects</h3>
+					<h3 class="project-fix">Projects</h3>
+					<div class="container">
+						<div class="row">
 
-					<!-- Card Deck - Use image size 960x640 -->
-					<div class="card-deck">
+							<!-- Learning to Necro card -->
+							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+								<div class="card-container">
+									<div class="card">
 
-						<!-- Card One -->
-						<div class="card mb-4">
-							<img class="card-img-top img-fluid" src="img/screenshot-tribute-page-block.png" alt="Card image cap">
-							<div class="card-block">
-								<h4 class="card-title">Tribute Page</h4>
-								<p class="card-text">The first basic front end development project introduced. I made a tribute page to John M. Keynes a 20th century British economist. This was the first project that did not give any step-by-step directions and instead let the learner go off of just an example as a end-goal. I used some Bootstrap 4.0.0 alpha classes in this project; mainly a 'Card' for the image, as they removed thumbnails in this version of Bootstrap.</p>
-							</div>
-							<div class="card-footer">
-								<small>Last updated 3 mins ago</small>
-							</div>
-						</div>
-						<span></span>
+										<div class="card-front">
+											<img class="card-img-top img-fluid" src="img/screenshot-learning-to-necro-block.png" alt="Screenshot preview of Learning to Necro website.">
+											<div class="card-content">
+												<div class="card-content-main">
+													<h4>Learning to Necro</h4>
+												</div>
+												<div class="card-content-footer">
+													<img src="img/icon-html5.svg" alt="HTML5 icon" width="21.5">
+													<img src="img/icon-css3.svg" alt="CSS3 icon" width="25">
+													<img src="img/icon-javascript.svg" alt="Javascript icon" width="25">
+													<img src="img/icon-jquery.svg" alt="jQuery icon" width="25">
+													<small class="float-right"><em>~ Completed sometime 2012</em></small>
+												</div>
+											</div>
+										</div> <!-- end front panel -->
 
-						<!-- Card Two -->
-						<div class="card mb-4">
-							<img class="card-img-top img-fluid" src="img/screenshot-jquery-playground-block.png" alt="Card image cap">
-							<div class="card-block">
-								<h4 class="card-title">Card title</h4>
-								<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-							</div>
-							<div class="card-footer">
-								<small>Last updated 3 mins ago</small>
-							</div>
-						</div>
-						<span></span>
-						
-						<!-- Card Three -->
-						<div class="card mb-4">
-							<img class="card-img-top img-fluid" src="img/screenshot-cat-photo-app-block.png" alt="Card image cap">
-							<div class="card-block">
-								<h4 class="card-title">Card title</h4>
-								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-							</div>
-							<div class="card-footer">
-								<small>Last updated 3 mins ago</small>
-							</div>
-						</div>
-						<span></span>
-						
-						<!-- Card Four -->
-						<div class="card mb-4">
-							<img class="card-img-top img-fluid" src="img/image-coming-soon.png" alt="Card image cap">
-							<div class="card-block">
-								<h4 class="card-title">Card title</h4>
-								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-							</div>
-							<div class="card-footer">
-								<small>Last updated 3 mins ago</small>
-							</div>
-						</div>
-						<span></span>
-							
-						<!-- Card Five -->
-						<div class="card mb-4">
-							<img class="card-img-top img-fluid" src="img/image-coming-soon.png" alt="Card image cap">
-							<div class="card-block">
-								<h4 class="card-title">Card title</h4>
-								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-							</div>
-							<div class="card-footer">
-								<small>Last updated 3 mins ago</small>
-							</div>
-						</div>
-						<span></span>
-						
-						<!-- Card Six -->
-						<div class="card mb-4">
-							<img class="card-img-top img-fluid" src="img/image-coming-soon.png" alt="Card image cap">
-							<div class="card-block">
-								<h4 class="card-title">Card title</h4>
-								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-							</div>
-							<div class="card-footer">
-								<small>Last updated 3 mins ago</small>
-							</div>
-						</div>
-						<span></span>
+										<div class="card-back">
+											<div class="card-content-main">
+												<h4>Learning to Necro</h4>
+												<p>One of my first projects. Around the release of <em>Guild Wars 2</em>, I built this website as a way to learn more about html. While it may not serve a real purpose for players in the game today, I can look back at this being a first stepping stone into learning more about web development.</p>
+											</div>
+											<div class="card-content-footer">
+												<a href="http://learningtonecro.com/" class="btn btn-primary float-right" target="_blank"><i class="fa fa-external-link"> View Site</i></a>
+											</div>
+										</div> <!-- end back panel -->
+									</div>
+								</div>
+							</div> <!-- end Learning to Necro Card card -->
 
-						<!-- Card Seven -->
-						<div class="card mb-4">
-							<img class="card-img-top img-fluid" src="img/image-coming-soon.png" alt="Card image cap">
-							<div class="card-block">
-								<h4 class="card-title">Card title</h4>
-								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-							</div>
-							<div class="card-footer">
-								<small>Last updated 3 mins ago</small>
-							</div>
-						</div>
-						<span></span>
+							<!-- Tribute Page card -->
+							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+								<div class="card-container">
+									<div class="card">
 
-						<!-- Card Eight -->
-						<div class="card mb-4">
-							<img class="card-img-top img-fluid" src="img/image-coming-soon.png" alt="Card image cap">
-							<div class="card-block">
-								<h4 class="card-title">Card title</h4>
-								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-							</div>
-							<div class="card-footer">
-								<small>Last updated 3 mins ago</small>
-							</div>
-						</div>
-						<span></span>
+										<div class="card-front">
+											<img class="card-img-top img-fluid" src="img/screenshot-tribute-page-block.png" alt="Screenshot preview of Tribute Page project.">
+											<div class="card-content">
+												<div class="card-content-main">
+													<h4>Tribute Page</h4>
+												</div>
+												<div class="card-content-footer">
+													<img src="img/icon-html5.svg" alt="HTML5 icon" width="21.5">
+													<img src="img/icon-css3.svg" alt="CSS3 icon" width="25">
+													<img src="img/icon-bootstrap.svg" alt="BootStrap icon" width="25">
+													<small class="float-right"><em>~ Completed May 05, 2017</em></small>
+												</div>
+											</div>
+										</div> <!-- end front panel -->
 
-						<!-- Card Nine -->
-						<div class="card mb-4">
-							<img class="card-img-top img-fluid" src="img/image-coming-soon.png" alt="Card image cap">
-							<div class="card-block">
-								<h4 class="card-title">Card title</h4>
-								<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-							</div>
-							<div class="card-footer">
-								<small>Last updated 3 mins ago</small>
-							</div>
-						</div>
-						<span></span>
+										<div class="card-back">
+											<div class="card-content-main">
+												<h4>Tribute Page</h4>
+												<p>The first basic front end development project I created for <em>freeCodeCamp</em>. I made a tribute page to John M. Keynes a 20th century British economist.</p>
+											</div>
+											<div class="card-content-footer">
+												<a href="https://codepen.io/Sulph/full/XRavGG/" class="btn btn-primary float-right" target="_blank"><i class="fa fa-codepen"></i> View Site</a>
+											</div>
+										</div> <!-- end back panel -->
+									</div>
+								</div>
+							</div> <!-- end Tribute Page card -->
 
-					</div>
-				</div>
+							<!-- jQuery Playground card -->
+							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+								<div class="card-container">
+									<div class="card">
 
+										<div class="card-front">
+											<img class="card-img-top img-fluid" src="img/screenshot-jquery-playground-block.png" alt="Screenshot of jQuery playground project.">
+											<div class="card-content">
+												<div class="card-content-main">
+													<h4>jQuery Playground</h4>
+												</div>
+												<div class="card-content-footer">
+													<img src="img/icon-javascript.svg" alt="Javascript icon" width="25">
+													<img src="img/icon-jquery.svg" alt="jQuery icon" width="25">
+													<small class="float-right"><em>~ Completed May 04, 2017</em></small>
+												</div>
+											</div>
+										</div> <!-- end front panel -->
+
+										<div class="card-back">
+											<div class="card-content-main">
+												<h4>jQuery Playground</h4>
+												<p>A playground used in several freeCodeCamp challenges teaching about how to use various jQuery commands. While this is not very much of a project to show off, I believe it is a good thing to recognize a simple project that allows you to test the many functions of jQuery.</p>
+											</div>
+											<div class="card-content-footer">
+												<a href="https://codepen.io/Sulph/pen/aWEyaK" class="btn btn-primary float-right" target="_blank"><i class="fa fa-codepen"></i> View Site</a>
+											</div>
+										</div> <!-- end back panel -->
+									</div>
+								</div>
+							</div> <!-- end jQuery Playground card -->
+
+							<!-- Cat Photo App card -->
+							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+								<div class="card-container">
+									<div class="card">
+
+										<div class="card-front">
+											<img class="card-img-top img-fluid" src="img/screenshot-cat-photo-app-block.png" alt="Screenshot of Cat Photo App project.">
+											<div class="card-content">
+												<div class="card-content-main">
+													<h4>Cat Photo App</h4>
+												</div>
+												<div class="card-content-footer">
+													<img src="img/icon-html5.svg" alt="HTML5 icon" width="21.5">
+													<img src="img/icon-css3.svg" alt="CSS3 icon" width="25">
+													<img src="img/icon-bootstrap.svg" alt="BootStrap icon" width="25">
+													<small class="float-right"><em>~ Completed May 03, 2017</em></small>
+												</div>
+											</div>
+										</div> <!-- end front panel -->
+
+										<div class="card-back">
+											<div class="card-content-main">
+												<h4>Cat Photo App</h4>
+												<p>Simple starting project. Teachings of responsive design were made as well as the basic foundations of html, css, and bootstrap were taught in this lesson/project. This was made to fit the size of a fairly small screen-sized phone.</p>
+											</div>
+											<div class="card-content-footer">
+												<a href="https://codepen.io/Sulph/pen/qmPGwq" class="btn btn-primary float-right" target="_blank"><i class="fa fa-codepen"></i> View Site</a>
+											</div>
+										</div> <!-- end back panel -->
+									</div>
+								</div>
+							</div> <!-- end Cat Photo App card -->
+
+							<!-- Template card -->
+							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+								<div class="card-container">
+									<div class="card">
+
+										<div class="card-front">
+											<img class="card-img-top img-fluid" src="img/image-coming-soon.png" alt="Template picture alt text">
+											<div class="card-content">
+												<div class="card-content-main">
+													<h4>Template Title</h4>
+												</div>
+												<div class="card-content-footer">
+													<img src="img/icon-html5.svg" alt="HTML5 icon" width="21.5">
+													<img src="img/icon-css3.svg" alt="CSS3 icon" width="25">
+													<img src="img/icon-javascript.svg" alt="Javascript icon" width="25">
+													<img src="img/icon-bootstrap.svg" alt="BootStrap icon" width="25">
+													<img src="img/icon-jquery.svg" alt="jQuery icon" width="25">
+													<small class="float-right"><em>~ Completed May 04, 2017</em></small>
+												</div>
+											</div>
+										</div> <!-- end front panel -->
+
+										<div class="card-back">
+											<div class="card-content-main">
+												<h4>Template Title</h4>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vulputate mauris eget lectus blandit mattis. In mollis turpis at sodales fringilla. Quisque vitae mi non ipsum ornare cursus eget sed tortor. Morbi pretium feugiat scelerisque. Mauris aliquam id lorem ac tristique.</p>
+											</div>
+											<div class="card-content-footer">
+												<a href="#" class="btn btn-primary float-right">Button</a>
+											</div>
+										</div> <!-- end back panel -->
+									</div>
+								</div>
+							</div> <!-- end Template card -->
+
+							<!-- Template card -->
+							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+								<div class="card-container">
+									<div class="card">
+
+										<div class="card-front">
+											<img class="card-img-top img-fluid" src="img/image-coming-soon.png" alt="Template picture alt text">
+											<div class="card-content">
+												<div class="card-content-main">
+													<h4>Template Title</h4>
+												</div>
+												<div class="card-content-footer">
+													<img src="img/icon-html5.svg" alt="HTML5 icon" width="21.5">
+													<img src="img/icon-css3.svg" alt="CSS3 icon" width="25">
+													<img src="img/icon-javascript.svg" alt="Javascript icon" width="25">
+													<img src="img/icon-bootstrap.svg" alt="BootStrap icon" width="25">
+													<img src="img/icon-jquery.svg" alt="jQuery icon" width="25">
+													<small class="float-right"><em>~ Completed May 04, 2017</em></small>
+												</div>
+											</div>
+										</div> <!-- end front panel -->
+
+										<div class="card-back">
+											<div class="card-content-main">
+												<h4>Template Title</h4>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vulputate mauris eget lectus blandit mattis. In mollis turpis at sodales fringilla. Quisque vitae mi non ipsum ornare cursus eget sed tortor. Morbi pretium feugiat scelerisque. Mauris aliquam id lorem ac tristique.</p>
+											</div>
+											<div class="card-content-footer">
+												<a href="#" class="btn btn-primary float-right">Button</a>
+											</div>
+										</div> <!-- end back panel -->
+									</div>
+								</div>
+							</div> <!-- end Template card -->
+
+							<!-- Template card -->
+							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+								<div class="card-container">
+									<div class="card">
+
+										<div class="card-front">
+											<img class="card-img-top img-fluid" src="img/image-coming-soon.png" alt="Template picture alt text">
+											<div class="card-content">
+												<div class="card-content-main">
+													<h4>Template Title</h4>
+												</div>
+												<div class="card-content-footer">
+													<img src="img/icon-html5.svg" alt="HTML5 icon" width="21.5">
+													<img src="img/icon-css3.svg" alt="CSS3 icon" width="25">
+													<img src="img/icon-javascript.svg" alt="Javascript icon" width="25">
+													<img src="img/icon-bootstrap.svg" alt="BootStrap icon" width="25">
+													<img src="img/icon-jquery.svg" alt="jQuery icon" width="25">
+													<small class="float-right"><em>~ Completed May 04, 2017</em></small>
+												</div>
+											</div>
+										</div> <!-- end front panel -->
+
+										<div class="card-back">
+											<div class="card-content-main">
+												<h4>Template Title</h4>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vulputate mauris eget lectus blandit mattis. In mollis turpis at sodales fringilla. Quisque vitae mi non ipsum ornare cursus eget sed tortor. Morbi pretium feugiat scelerisque. Mauris aliquam id lorem ac tristique.</p>
+											</div>
+											<div class="card-content-footer">
+												<a href="#" class="btn btn-primary float-right">Button</a>
+											</div>
+										</div> <!-- end back panel -->
+									</div>
+								</div>
+							</div> <!-- end Template card -->
+
+							<!-- Template card -->
+							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+								<div class="card-container">
+									<div class="card">
+
+										<div class="card-front">
+											<img class="card-img-top img-fluid" src="img/image-coming-soon.png" alt="Template picture alt text">
+											<div class="card-content">
+												<div class="card-content-main">
+													<h4>Template Title</h4>
+												</div>
+												<div class="card-content-footer">
+													<img src="img/icon-html5.svg" alt="HTML5 icon" width="21.5">
+													<img src="img/icon-css3.svg" alt="CSS3 icon" width="25">
+													<img src="img/icon-javascript.svg" alt="Javascript icon" width="25">
+													<img src="img/icon-bootstrap.svg" alt="BootStrap icon" width="25">
+													<img src="img/icon-jquery.svg" alt="jQuery icon" width="25">
+													<small class="float-right"><em>~ Completed May 04, 2017</em></small>
+												</div>
+											</div>
+										</div> <!-- end front panel -->
+
+										<div class="card-back">
+											<div class="card-content-main">
+												<h4>Template Title</h4>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vulputate mauris eget lectus blandit mattis. In mollis turpis at sodales fringilla. Quisque vitae mi non ipsum ornare cursus eget sed tortor. Morbi pretium feugiat scelerisque. Mauris aliquam id lorem ac tristique.</p>
+											</div>
+											<div class="card-content-footer">
+												<a href="#" class="btn btn-primary float-right">Button</a>
+											</div>
+										</div> <!-- end back panel -->
+									</div>
+								</div>
+							</div> <!-- end Template card -->
+
+							<!-- Template card -->
+							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
+								<div class="card-container">
+									<div class="card">
+
+										<div class="card-front">
+											<img class="card-img-top img-fluid" src="img/image-coming-soon.png" alt="Template picture alt text">
+											<div class="card-content">
+												<div class="card-content-main">
+													<h4>Template Title</h4>
+												</div>
+												<div class="card-content-footer">
+													<img src="img/icon-html5.svg" alt="HTML5 icon" width="21.5">
+													<img src="img/icon-css3.svg" alt="CSS3 icon" width="25">
+													<img src="img/icon-javascript.svg" alt="Javascript icon" width="25">
+													<img src="img/icon-bootstrap.svg" alt="BootStrap icon" width="25">
+													<img src="img/icon-jquery.svg" alt="jQuery icon" width="25">
+													<small class="float-right"><em>~ Completed May 04, 2017</em></small>
+												</div>
+											</div>
+										</div> <!-- end front panel -->
+
+										<div class="card-back">
+											<div class="card-content-main">
+												<h4>Template Title</h4>
+												<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vulputate mauris eget lectus blandit mattis. In mollis turpis at sodales fringilla. Quisque vitae mi non ipsum ornare cursus eget sed tortor. Morbi pretium feugiat scelerisque. Mauris aliquam id lorem ac tristique.</p>
+											</div>
+											<div class="card-content-footer">
+												<a href="#" class="btn btn-primary float-right">Button</a>
+											</div>
+										</div> <!-- end back panel -->
+									</div>
+								</div>
+							</div> <!-- end Template card -->
+
+						</div> <!-- end row -->
+					</div> <!-- end container -->
+				</div> <!-- end #Projects .col -->
+			</div> <!-- end #Projects .row -->
+
+			<div class="row">
 				<div class="contact col-sm-12" id="Contact">
 					<h3>Contact Me</h3>
 					<p>
@@ -193,14 +388,15 @@
 					<p>
 						Praesent quis pulvinar odio. Vestibulum tincidunt ante vel enim consequat ullamcorper. Ut sollicitudin, ipsum eu suscipit lacinia, nulla turpis mattis nulla, a tincidunt felis sapien a nisi. Etiam non cursus diam, quis sagittis turpis. Fusce faucibus nisl turpis, a hendrerit massa sagittis quis. Aenean lacinia eu libero et hendrerit. Sed id ligula tellus. Mauris tristique ornare ipsum vel scelerisque. Etiam faucibus ligula tempor tortor pretium feugiat. Nulla sit amet justo augue. Nulla eleifend, augue auctor tempus ornare, mi massa blandit neque, quis aliquet augue lacus at quam. Nam sed quam tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam volutpat elit non libero lacinia mollis. Nullam blandit, ante a tempus gravida, urna nunc vulputate erat, vitae fringilla mauris tellus posuere velit.
 					</p>
-				</div>
-			</div>
-		</div>
+				</div> <!-- end #Contact .col -->
+			</div> <!-- end #Contact .row -->
+		</div> <!-- end container-fluid -->
 
 		<!-- load jquery before bootstrap -->
 		<script src="js/jquery-3.2.1.min.js"></script>
 		<script src="js/tether.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+
 	</body>
 
 	<footer>
