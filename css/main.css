@@ -8,12 +8,12 @@ body {
 	padding-top: 6em;
 
 	background-image: url("../img/vector-lighthouse.svg");
-	background-repeat: no-repeat;
-	background-position: center calc(50%-6em);
 	background-attachment: fixed;
+	background-position: center calc(50% - 6em);
+	background-repeat: no-repeat;
 	background-size: cover;
 
-	height: 100%; /* mobile background image fix */
+	height: 100%;
 }
 
 /*
