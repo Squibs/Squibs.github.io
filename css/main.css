@@ -214,38 +214,38 @@ h5 {
 	*/
 	@media screen and (min-width: 1px) and (max-width: 359px) {
 		.about {
-			margin-top: 28vh; /* 28vh */
+			margin-top: 28vh;
 		}
 	}
 
 	@media screen and (min-width: 360px) and (max-width: 599px) {
 		.about {
-			margin-top: 38vh; /* 38vh */
+			margin-top: 50vh;
 		}	
 	}
 
 	@media screen and (min-width: 600px) and (max-width: 899px) {
 		.about {
-			margin-top: 70vh; /* 70vh */
+			margin-top: 76vh;
 		}	
 	}
 
 	@media screen and (min-width: 900px) and (max-width: 1199px) {
 		.about {
-			margin-top: 72vh; /* 72vh */
+			margin-top: 80vh;
 		}
 	}
 
 	@media screen and (min-width: 1200px) and (max-width: 1799px) {
 		.about {
-			margin-top: 62vh; /* 62 */
+			margin-top: 62vh;
 		}
 	}
 
 /* 1080p */
 	@media screen and (min-width: 1800px) and (max-width: 2559px) {
 		.about {
-			margin-top: 68vh; /* 66vh */
+			margin-top: 78vh;
 		}
 
 		.home {
