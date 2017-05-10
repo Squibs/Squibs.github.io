@@ -3,42 +3,26 @@
 	Whole Page Styles
 	=============================
 */
-body {
+.body {
 	background-color: #165F88;
-	padding-top: 6em;
-/*
-	height: 100vh;
-	background-image: url("../img/vector-lighthouse.svg");
-	background-attachment: fixed;
-	background-position: center calc(50% - 6em);
-	background-repeat: no-repeat;
-
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-*/
 }
 
-.backdrop {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
+.backstretch {
+	background-color: #165F88;
+	padding-top: 6em;
 
+	height: 100%;
+	width: 100%;
 	z-index: -1;
-	height: 100vh;
+	position: fixed;
+
 	background-image: url("../img/vector-lighthouse.svg");
-	
+	background-position: center calc(50% - 6em);
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	background-size: cover;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-position: center calc(50% - 6em);
+	overflow: hidden;
 }
 
 /*
