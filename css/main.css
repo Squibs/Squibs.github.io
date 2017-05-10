@@ -7,13 +7,12 @@ body {
 	background-color: #165F88;
 	padding-top: 6em;
 
+	height: 100vh; /* mobile fix */
 	background-image: url("../img/vector-lighthouse.svg");
+	background-size: cover;
 	background-attachment: fixed;
 	background-position: center calc(50% - 6em);
 	background-repeat: no-repeat;
-	background-size: cover;
-
-	height: 100%;
 }
 
 /*
