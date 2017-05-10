@@ -11,13 +11,14 @@
 	background-color: #165F88;
 	padding-top: 6em;
 
-	height: 125%;
+	height: 100%;
 	width: 100%;
 	z-index: -10;
 	position: fixed;
 
 	background-image: url("../img/vector-lighthouse.svg");
 	background-position: center calc(50% - 6em);
+	background-repeat: no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
