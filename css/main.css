@@ -5,7 +5,6 @@
 */
 .body {
 	background-color: #165F88;
-	margin: auto !important;
 }
 
 .backstretch {
@@ -16,6 +15,16 @@
 	height: 100vh;
 	width: 100%;
 	z-index: -10;
+	position: fixed;
+
+	background-image: url("../img/vector-lighthouse.svg");
+	background-position: center calc(50% - 6em);
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	overflow: hidden;
 }
 
 /*
@@ -30,27 +39,9 @@ nav {
 .home {
 	text-align: center;
 	position: relative;
+	top: 20vh;
 	color: white;
 	text-shadow: 1px 1px 6px black;
-
-	background-image: url("../img/vector-lighthouse.svg");
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-position: center calc(50% - 6em);
-
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-
-	height: calc(100vh - 6.1em);
-	background-color: #165F88;
-	z-index: -1;
-}
-
-.home h1 {
-	padding-top: 20vh;
-	z-index: 10000;
 }
 
 h1 {
@@ -74,7 +65,6 @@ h2 {
 	background-color: #165F88;
 	box-shadow: 0px -7px 10px -5px #333;
 	padding: 7em 20% 5em 20%;
-	margin-top: -1.8em;
 }
 
 /*
@@ -275,3 +265,73 @@ h5 {
 	font-size: 0.5em;
 	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000, -1px 0px 0 #000;
 }
+
+/*
+	=============================
+	Mobile Device Fixes
+	=============================
+*/
+/* Mobiles */
+	*/
+	@media screen and (min-width: 1px) and (max-width: 359px) {
+		.about {
+			margin-top: 28vh;
+		}
+	}
+
+	@media screen and (min-width: 360px) and (max-width: 599px) {
+		.about {
+			margin-top: 50vh;
+		}	
+	}
+
+	@media screen and (min-width: 600px) and (max-width: 899px) {
+		.about {
+			margin-top: 76vh;
+		}	
+	}
+
+	@media screen and (min-width: 900px) and (max-width: 1199px) {
+		.about {
+			margin-top: 80vh;
+		}
+	}
+
+	@media screen and (min-width: 1200px) and (max-width: 1799px) {
+		.about {
+			margin-top: 62vh;
+		}
+	}
+
+/* 1080p */
+	@media screen and (min-width: 1800px) and (max-width: 2559px) {
+		.about {
+			margin-top: 78vh; /* 78vh */
+		}
+
+		.home {
+	    	z-index: 10000;
+	    }
+	}
+
+/* 1440p */
+	@media screen and (min-width: 2560px) and (max-width: 3839px) {
+		.about {
+			margin-top: 76vh;
+		}
+
+		.home {
+			z-index: 10000;
+		}
+	}
+
+/* 4k */
+	@media screen and (min-width: 3840px) {
+		.about {
+			margin-top: 84vh;
+		}
+
+		.home {
+			z-index: 10000;
+		}
+	}
