@@ -8,6 +8,7 @@
 }
 
 .backstretch {
+	/* touch nothing here; iOS is a fickle beast */
 	background-color: #165F88;
 	padding-top: 6em;
 
@@ -197,12 +198,59 @@ h5 {
 	Card Styling
 	=============================
 */
-.card>* {
-	border-radius: : 0px;
-}
-
 .card {
 	border: 0px;
+}
+
+.card .card-front, .card .card-back {
+	background-color: #FFF;
+}
+
+.card .card-content-footer {
+	background-color: #ADADAD;
+}
+
+.card .card-content-main {
+	position: absolute;
+	left: 3px;
+}
+
+.card .card-front .card-content-footer {
+	position: absolute;
+	bottom: 3px;
+	left: 3px;
+	width: 100%;
+	border-radius: 100px 0 0 15px;
+	padding: 8px 0 8px 30px;
+	box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+.card .card-back .card-content-footer {
+	position: absolute;
+	bottom: 3px;
+	right: 3px;
+	width: 100%;
+	border-radius: 0 100px 15px 0;
+	padding: 3px 0 2px 30px;
+	box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+/*
+	=============================
+	Card Flip-Over Button
+	=============================
+*/
+
+.card .card-front .card-flip-btn {
+	position: absolute;
+	bottom: 25%;
+	right: 3%;
+	border-radius: 50%;
+	background-color: #F0AD4E;
+	padding: 18px 28px 20px 28px;
+	font-size: 2em;
+	color: white;
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.75), 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 0px 0px 5px rgba(255, 255, 255, 1);
 }
 
 /*
