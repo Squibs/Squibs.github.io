@@ -7,10 +7,16 @@
 	background-color: #165F88;
 }
 
+header {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .backstretch {
 	/* touch nothing here; iOS is a fickle beast */
 	background-color: #165F88;
-	padding-top: 6em;
 
 	height: 100vh;
 	width: 100%;
@@ -20,10 +26,12 @@
 	background-image: url("../img/vector-lighthouse.svg");
 	background-position: center calc(50% - 6em);
 	background-repeat: no-repeat;
+
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+
 	overflow: hidden;
 }
 
@@ -34,6 +42,7 @@
 */
 nav {
 	background-color: #DAF1FF;
+	box-shadow: 0px 7px 10px -5px #333;
 }
 
 .home {
@@ -210,13 +219,13 @@ h5 {
 	background-color: #ADADAD;
 }
 
-.card .card-front .card-content-main h4 {
-	text-align: center;
+.card .card-content-main {
+	position: relative;
+	left: 3px;
 }
 
-.card .card-content-main {
-	position: absolute;
-	left: 3px;
+.card .card-front .card-content-main {
+	text-align: center;
 }
 
 .card .card-front .card-content-footer {
@@ -266,72 +275,6 @@ h5 {
 	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000, -1px 0px 0 #000;
 }
 
-/*
-	=============================
-	Mobile Device Fixes
-	=============================
-*/
-/* Mobiles */
-	*/
-	@media screen and (min-width: 1px) and (max-width: 359px) {
-		.about {
-			margin-top: 28vh;
-		}
-	}
-
-	@media screen and (min-width: 360px) and (max-width: 599px) {
-		.about {
-			margin-top: 50vh;
-		}	
-	}
-
-	@media screen and (min-width: 600px) and (max-width: 899px) {
-		.about {
-			margin-top: 76vh;
-		}	
-	}
-
-	@media screen and (min-width: 900px) and (max-width: 1199px) {
-		.about {
-			margin-top: 80vh;
-		}
-	}
-
-	@media screen and (min-width: 1200px) and (max-width: 1799px) {
-		.about {
-			margin-top: 62vh;
-		}
-	}
-
-/* 1080p */
-	@media screen and (min-width: 1800px) and (max-width: 2559px) {
-		.about {
-			margin-top: 78vh; /* 78vh */
-		}
-
-		.home {
-	    	z-index: 10000;
-	    }
-	}
-
-/* 1440p */
-	@media screen and (min-width: 2560px) and (max-width: 3839px) {
-		.about {
-			margin-top: 76vh;
-		}
-
-		.home {
-			z-index: 10000;
-		}
-	}
-
-/* 4k */
-	@media screen and (min-width: 3840px) {
-		.about {
-			margin-top: 84vh;
-		}
-
-		.home {
-			z-index: 10000;
-		}
-	}
+.card .card-back .card-flip-btn {
+	right: 1.25%;
+}
