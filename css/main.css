@@ -8,8 +8,7 @@
 }
 
 header {
-	height: 100vh;
-	padding-bottom: 25px;
+	height: 95vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -24,7 +23,7 @@ header {
 	position: fixed;
 
 	background-image: url("../img/vector-lighthouse.svg");
-	background-position: center calc(50% - 6em);
+	background-position: center calc(50% - 3em);
 	background-repeat: no-repeat;
 
 	-webkit-background-size: cover;
@@ -33,8 +32,6 @@ header {
 	background-size: cover;
 
 	overflow: hidden;
-
-	padding-bottom: 25px;
 }
 
 /*
