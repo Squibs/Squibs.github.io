@@ -9,13 +9,13 @@
 
 header {
 	height: 100vh;
+	padding-bottom: 25px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
 .backstretch {
-	/* touch nothing here; iOS is a fickle beast */
 	background-color: #165F88;
 
 	height: 100vh;
@@ -33,6 +33,8 @@ header {
 	background-size: cover;
 
 	overflow: hidden;
+
+	padding-bottom: 25px;
 }
 
 /*
