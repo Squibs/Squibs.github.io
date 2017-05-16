@@ -22,9 +22,12 @@ header {
 	z-index: -10;
 	position: fixed;
 
-	background-image: url("../img/vector-lighthouse.svg");
+	background-image: url("../img/vector-lighthouse.svg") !important;
 	background-position: center calc(50% - 3em);
 	background-repeat: no-repeat;
+
+	/* iOS fix for bottom bar leaving white behind */
+	transform: translate3d(0,0,0);
 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
