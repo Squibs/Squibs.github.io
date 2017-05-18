@@ -67,6 +67,13 @@ h2 {
 	font-weight: 300;
 }
 
+h3 {
+	font-size: 3em;
+	margin-bottom: 1em;
+	text-align: center;
+	color: #FFF;
+}
+
 /*
 	=============================
 	About
@@ -75,7 +82,28 @@ h2 {
 .about {
 	background-color: #165F88;
 	box-shadow: 0px -7px 10px -5px #333;
-	padding: 7em 20% 5em 20%;
+	padding: 7em 1% 5em 1%;
+	overflow: hidden;
+	color: #222;
+}
+
+.about h4 {
+	font-size: 1em;
+}
+
+.img-container {
+	height: 300px;
+	margin-bottom: 1em;
+}
+
+.img-circle {
+	border-radius: 50%;
+	overflow: hidden;
+	width: auto;
+	max-height: 100%;
+	display: block;
+	margin: 0 auto;
+	box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.25);
 }
 
 /*
@@ -86,11 +114,11 @@ h2 {
 .projects {
 	background-color: #2581B2;
 	box-shadow: 0px -7px 10px -5px #333;
-	padding: 7em 0% 5em 0%;
+	padding: 7em 0 5em 0;
 }
 
 .project-fix {
-	padding: 0em 0em 0.5vw 20vw;
+	padding-bottom: 0.5vw;
 }
 
 /*
@@ -101,7 +129,51 @@ h2 {
 .contact {
 	background-color: #3696C9;
 	box-shadow: 0px -7px 10px -5px #333;
-	padding: 7em 20% 5em 20%;
+	padding: 7em 1% 5em 1%;
+	color: #222;
+	overflow: hidden;
+}
+
+.contact h4 {
+	font-size: 1.5em;
+}
+
+.socials {
+	word-spacing: 2vw;
+}
+
+.form-group {
+	display: flex;
+}
+
+.form-fix {
+	margin-bottom: 3%;
+}
+
+/*
+	=============================
+	Form Floating Labels
+	=============================
+*/
+label {
+	position: absolute;
+	transform: translate3d(14px, 6px, 0) scale(1);
+	transform-origin: left top;
+	transition: 240ms;
+}
+
+.form-group.focused label {
+	transform: scale(0.75);
+	transform: translate3d(5px, -12px, 0);
+	background-color: #0275D8;
+	border-radius: 50%;
+	padding: 0 5px 0 5px;
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.14);
+	color: white;
+}
+
+input:focus, textarea:focus {
+	transition: none;
 }
 
 /*
@@ -115,6 +187,7 @@ footer {
 	box-shadow: 0px -7px 10px -5px #333;
 	text-align: center;
 	position: relative; /* shadow fix */
+	color: #222;
 }
 
 h5 {
