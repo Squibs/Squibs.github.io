@@ -16,8 +16,8 @@
 	</head>
 
 	<body>
-		<header>
-			<nav class="navbar fixed-top navbar-toggleable-sm navbar-light">
+		<header id="Home">
+			<nav class="navbar fixed-top navbar-toggleable-sm navbar-light" id="Nav">
 
 				<!-- mobile button for navbar collapse at medium breakpoint -->
 				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,13 +25,13 @@
 				</button>
 
 				<!-- navbar items -->
-				<a class="navbar-brand" href="#">ZACHARY HOLMAN</a>
+				<a class="navbar-brand" href="#Home">ZACHARY HOLMAN</a>
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<div class="navbar-nav">
-						<a class="nav-item nav-link" href="#">Home</a>
-						<a class="nav-item nav-link" href="#About">About Me</a>
-						<a class="nav-item nav-link" href="#Projects">Projects</a>
-						<a class="nav-item nav-link" href="#Contact">Contact Me</a>
+						<a class="nav-item nav-link nav-home active" href="#Home">Home</a>
+						<a class="nav-item nav-link nav-about" href="#About">About Me</a>
+						<a class="nav-item nav-link nav-projects" href="#Projects">Projects</a>
+						<a class="nav-item nav-link nav-contact" href="#Contact">Contact Me</a>
 					</div>
 				</div>
 			</nav>
@@ -433,21 +433,23 @@
 								<a href="https://twitter.com/SquibsVids" target="_blank"><span class="fa-stack fa-lg fa-2x"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></a>
 							</span>
 						</div>
+
+						<!-- Contact Me Form -->
 						<div class="col-lg-4 col-md-4">
-							<form id="form" class="form responsive-form" action="#" method="get">
+							<form class="form responsive-form" action="#" method="get">
 								<div class="form-group">
 									<label for="name">Name:</label>
-									<input type="text" class="form-control" name="name" id="name" required>
+									<input type="text" class="form-control" name="name" required=''>
 								</div>
 								<div class="form-group">
 									<label for="email">Email:</label>
-									<input type="email" class="form-control" name="email" id="email" required>
+									<input type="email" class="form-control" name="email" required=''>
 								</div>
 								<div class="form-group">
 									<label for="message">Message:</label>
-									<textarea class="form-control" name="message" id="message" rows="6" required></textarea>
+									<textarea class="form-control" name="message" rows="6" required=''></textarea>
 								</div>
-								<button id="button" type="button" class="btn btn-primary btn"><i class="fa fa-paper-plane"></i> Send</button>
+								<button type="submit" class="btn btn-primary btn"><i class="fa fa-paper-plane"></i> Send</button>
 							</form>
 						</div>
 					</div>
