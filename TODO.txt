@@ -1,0 +1,8 @@
+TODO:
+
+Navbar highlights on click
+Navbar highlights on scroll
+
+Own backend for contact form; currently using formspree
+
+Better card styling; no idea what to do with white space on front of cards.
