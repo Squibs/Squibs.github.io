@@ -17,6 +17,7 @@
 
 	<body>
 		<header id="Home">
+			<div id="Nav-anchor"></div>
 			<nav class="navbar fixed-top navbar-toggleable-sm navbar-light" id="Nav">
 
 				<!-- mobile button for navbar collapse at medium breakpoint -->
@@ -28,7 +29,7 @@
 				<a class="navbar-brand" href="#Home">ZACHARY HOLMAN</a>
 				<div class="collapse navbar-collapse" id="navbarNav">
 					<div class="navbar-nav">
-						<a class="nav-item nav-link nav-home active" href="#Home">Home</a>
+						<a class="nav-item nav-link nav-home" href="#Home">Home</a>
 						<a class="nav-item nav-link nav-about" href="#About">About Me</a>
 						<a class="nav-item nav-link nav-projects" href="#Projects">Projects</a>
 						<a class="nav-item nav-link nav-contact" href="#Contact">Contact Me</a>
@@ -436,19 +437,22 @@
 
 						<!-- Contact Me Form -->
 						<div class="col-lg-4 col-md-4">
-							<form class="form responsive-form" action="#" method="get">
+							<form class="form responsive-form" method="POST" id="ContactForm">
 								<div class="form-group">
 									<label for="name">Name:</label>
-									<input type="text" class="form-control" name="name" required=''>
+									<input type="text" class="form-control" name="name" required/>
 								</div>
 								<div class="form-group">
 									<label for="email">Email:</label>
-									<input type="email" class="form-control" name="email" required=''>
+									<input type="email" class="form-control" name="_replyto" required/>
 								</div>
 								<div class="form-group">
 									<label for="message">Message:</label>
-									<textarea class="form-control" name="message" rows="6" required=''></textarea>
+									<textarea class="form-control" name="message" rows="6" required></textarea/>
 								</div>
+								<input type="text" name="_gotcha" style="display: none" />
+								<input type="hidden" name="_subject" value="My GitHub Hosted Portfolio - Contact Form"/>
+								<input type="hidden" name="_next" value="#Contact"/>
 								<button type="submit" class="btn btn-primary btn"><i class="fa fa-paper-plane"></i> Send</button>
 							</form>
 						</div>
