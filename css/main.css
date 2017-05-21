@@ -254,7 +254,6 @@ h5 {
 /* front pane above back pane */
 .card-front {
 	z-index: 2;
-	overflow: hidden;
 }
 
 /* hide back pane to start with */
