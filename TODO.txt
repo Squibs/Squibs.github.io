@@ -1,5 +1,7 @@
 TODO:
 
+Section, Article tags
+
 Re-write ABOUT content. Most of what is there atm is just temporary.
 	Add keywords/language employers would want to see.
 	Add actual photo of myself.
