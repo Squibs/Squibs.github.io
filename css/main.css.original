@@ -1,0 +1,355 @@
+/*
+	=============================
+	Whole Page Styles
+	=============================
+*/
+.body {
+	background-color: #165F88;
+}
+
+header {
+	height: 95vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.backstretch {
+	background-color: #165F88;
+
+	height: 100vh;
+	width: 100%;
+	z-index: -10;
+	position: fixed;
+
+	background-image: url("../img/vector-lighthouse.svg") !important;
+	background-position: center calc(50% - 3em);
+	background-repeat: no-repeat;
+
+	/* iOS fix for bottom bar leaving white behind */
+	transform: translate3d(0,0,0);
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	overflow: hidden;
+}
+
+/*
+	=============================
+	Navbar / Header
+	=============================
+*/
+nav {
+	background-color: #DAF1FF;
+	box-shadow: 0px 7px 10px -5px #333;
+}
+
+.home {
+	text-align: center;
+	position: relative;
+	top: 20vh;
+	color: white;
+	text-shadow: 	1px 1px 4px black,
+					1px 1px 6px black;
+}
+
+h1 {
+	font-size: 4em;
+	font-weight: 300;
+	line-height: 2ex;
+	letter-spacing: 0.03em;
+}
+
+h2 {
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+h3 {
+	font-size: 3em;
+	margin-bottom: 1em;
+	text-align: center;
+	color: #FFF;
+}
+
+/*
+	=============================
+	About
+	=============================
+*/
+.about {
+	background-color: #165F88;
+	box-shadow: 0px -7px 10px -5px #333;
+	padding: 7em 1% 5em 1%;
+	overflow: hidden;
+	color: #222;
+}
+
+.about h4 {
+	font-size: 1em;
+}
+
+.img-container {
+	height: 300px;
+	margin-bottom: 1em;
+}
+
+.img-circle {
+	border-radius: 50%;
+	overflow: hidden;
+	width: auto;
+	max-height: 100%;
+	display: block;
+	margin: 0 auto;
+	box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.25);
+}
+
+/*
+	=============================
+	Projects
+	=============================
+*/
+.projects {
+	background-color: #2581B2;
+	box-shadow: 0px -7px 10px -5px #333;
+	padding: 7em 0 5em 0;
+}
+
+.project-fix {
+	padding-bottom: 0.5vw;
+}
+
+/*
+	=============================
+	Contact
+	=============================
+*/
+.contact {
+	background-color: #3696C9;
+	box-shadow: 0px -7px 10px -5px #333;
+	padding: 7em 1% 5em 1%;
+	color: #222;
+	overflow: hidden;
+}
+
+.contact h4 {
+	font-size: 1.5em;
+}
+
+.socials {
+	word-spacing: 2vw;
+}
+
+.form-group {
+	display: flex;
+}
+
+.form-fix {
+	margin-bottom: 3%;
+}
+
+/*
+	=============================
+	Form Floating Labels
+	=============================
+*/
+label {
+	position: absolute;
+	transform: translate3d(14px, 6px, 0) scale(1);
+	transform-origin: left top;
+	transition: 240ms;
+}
+
+.form-group.focused label {
+	transform: scale(0.75);
+	transform: translate3d(5px, -16px, 0);
+	background-color: rgba(2, 117, 216, 1);
+	border-radius: 10px 5%;
+	padding: 0 5px 0 5px;
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.14);
+	color: white;
+}
+
+input:focus, textarea:focus {
+	transition: none;
+}
+
+/*
+	=============================
+	Footer
+	=============================
+*/
+footer {
+	background-color: #54AAD9;
+	padding: 0.25em 5% 0.25em 5%;
+	box-shadow: 0px -7px 10px -5px #333;
+	text-align: center;
+	position: relative; /* shadow fix */
+	color: #222;
+}
+
+h5 {
+	font-size: 1.20em;
+}
+
+/*
+	=============================
+	Cards Flip
+	=============================
+*/
+.card-container {
+	-webkit-perspective: 800px;
+	-moz-perspective: 800px;
+	-o-perspective: 800px;
+	perspective: 800px;
+
+	margin-bottom: 30px;
+}
+
+.card-container:not(.manual-flip):hover .card, .card-container.hover.manual-flip .card {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+.card-container.static:hover .card, .card-container.static.hover .card {
+	-webkit-transform: none;
+	-moz-transform: none;
+	-o-transform: none;
+	transform: none;
+}
+
+/* flip animation speed */
+.card {
+	-webkit-transition: -webkit-transform 0.8s;
+	-moz-transition: -moz-transform 0.8s;
+	-o-transition: -o-transform 0.8s;
+	transition: transform 0.8s;
+
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back-side of card */
+.card-front, .card-back {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	position: absolute !important;
+	top: 0;
+	left: 0;
+	background-color: #FFF;
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.14);
+}
+
+/* front pane above back pane */
+.card-front {
+	z-index: 2;
+}
+
+/* hide back pane to start with */
+.card-back {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+
+	z-index: 3;
+}
+
+.card-container, .card-front, .card-back {
+	width: 100%;
+	height: 420px;
+	border-radius: 0;
+}
+
+.card .card-img-top {
+	border-radius: 0;
+}
+
+/*
+	=============================
+	Card Styling
+	=============================
+*/
+.card {
+	border: 0px;
+}
+
+.card .card-front, .card .card-back {
+	background-color: #FFF;
+}
+
+.card .card-content-footer {
+	background-color: #ADADAD;
+}
+
+.card .card-content-main {
+	position: relative;
+	left: 3px;
+}
+
+.card .card-front .card-content-main {
+	text-align: center;
+}
+
+.card .card-front .card-content-footer {
+	position: absolute;
+	bottom: 3px;
+	left: 3px;
+	width: 100%;
+	border-radius: 100px 0 0 15px;
+	padding: 8px 110px 8px 30px;
+	text-align: right;
+	box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+.card .card-back .card-content-footer {
+	position: absolute;
+	bottom: 3px;
+	right: 3px;
+	width: 100%;
+	border-radius: 0 100px 15px 0;
+	padding: 3px 0 2px 5px;
+	box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+/*
+	=============================
+	Card Flip-Over Button
+	=============================
+*/
+.card .card-flip-btn {
+	position: absolute;
+	font-size: 4em;
+	color: white;
+	background-color: #F0AD4E;
+	border-radius: 50%;
+	padding: 0px 20px 2px 20px;
+	bottom: 25%;
+	right: 3%;
+	cursor: pointer;
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.75), 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 0px 0px 5px rgba(255, 255, 255, 1);
+}
+
+.card .card-flip-btn .btn-txt {
+	position: absolute;
+	top: 0.8em;
+	left: 0.8em;
+	font-size: 0.5em;
+	text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000, 0px 1px 0 #000, 0px -1px 0 #000, -1px 0px 0 #000;
+}
+
+.card .card-back .card-flip-btn {
+	right: 1.25%;
+}

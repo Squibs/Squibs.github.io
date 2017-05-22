@@ -10,6 +10,8 @@ Re-write ABOUT content. Most of what is there atm is just temporary.
 Better card styling; no idea what to do with white space on front and back of cards.
 	Limit card rows to two so that they all fit on one screen?
 		Figure out alternative for mobile.
+	New card images
+		Entire site screencaptures, bottom will be cut off via overflow in cards
 
 Own backend for contact form; currently using formspree
 	include email on side of contact me (example: https://codepen.io/daniloaquino/full/bqqKPZ/)
