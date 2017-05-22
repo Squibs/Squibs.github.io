@@ -1,5 +1,21 @@
+/*------------------------
+CSS DIRECTORY
+	1. =BACKSTRETCH
+	2. =NAVBAR
+	3. =HOME
+	4. =ABOUT
+	5. =PROJECTS
+		5.A =CARDS
+		5.B =CARD STYLES
+		5.C =CARD FLIP BTN
+	6. =CONTACT
+		6.A =FORM
+	7. =FOOTER
+------------------------*/
+
+
 /* =============================
-	BACKSTRETCH
+	1. =BACKSTRETCH
 ============================= */
 .backstretch {
 	position: fixed;
@@ -9,7 +25,7 @@
 	z-index: -100;
 
 	background-color: #165F88;
-	background-image: url("../img/vector-lighthouse.svg") !important;
+	background-image: url("../img/image-vector-lighthouse.svg") !important;
 	background-position: center calc(50% - 3em);
 	background-repeat: no-repeat;
 
@@ -25,7 +41,7 @@
 
 
 /* =============================
-	NAVBAR
+	2. =NAVBAR
 ============================= */
 nav {
 	background-color: #DAF1FF;
@@ -37,11 +53,11 @@ nav {
 
 
 /* =============================
-	HOME
+	3. =HOME
 ============================= */
 .home { 
 	position: relative;
-	top: 20vh;
+	top: 25vh;
 	height: 95vh;
 	text-align: center;
 	color: white;
@@ -52,8 +68,8 @@ nav {
 .home h1 {
 	font-size: 4em;
 	font-weight: 300;
-	line-height: 2ex;
 	letter-spacing: 0.03em;
+	margin-bottom: 4vh;
 }
 
 .home h2 {
@@ -64,12 +80,12 @@ nav {
 
 
 /* =============================
-	ABOUT
+	4. =ABOUT
 ============================= */
 .about {
 	background-color: #165F88;
-	box-shadow: 0 -7PX 10PX -5PX #333;
-	padding: 7em 1% 7em 1%;
+	box-shadow: 0 -7px 10px -5px #333;
+	padding: 5em 1% 5em 1%;
 	color: #222;
 	overflow: hidden;
 }
@@ -78,6 +94,7 @@ nav {
 	font-size: 3em;
 	margin-bottom: 1em;
 	text-align: center;
+	color: #FFF;
 }
 
 .about h2 { 
@@ -98,12 +115,12 @@ nav {
 
 
 /* =============================
-	PROJECTS
+	5. =PROJECTS
 ============================= */
 .projects {
 	background-color: #2581B2;
-	box-shadow: 0 -7PX 10PX -5PX #333;
-	padding: 7em 1% 7em 1%;
+	box-shadow: 0 -7px 10px -5px #333;
+	padding: 5em 1% 5em 1%;
 	overflow: hidden;
 }
 
@@ -114,166 +131,253 @@ nav {
 }
 
 
-	/* === CARDS === */
 
-		/* [[[ CARD FLIP ]]] */
+	/* =============================
+		5.A =CARDS
+	============================= */
+	/* controls flip animation perspective */
+	.card-container {
+		-webkit-perspective: 800px;
+		-moz-perspective: 800px;
+		-o-perspective: 800px;
+		perspective: 800px;
 
-			/* controls flip animation perspective */
-			.card-container {
-				-webkit-perspective: 800px;
-				-moz-perspective: 800px;
-				-o-perspective: 800px;
-				perspective: 800px;
+		margin-bottom: 30px;
+	}
 
-				margin-bottom: 30px;
-			}
+	/* do not roate if .manual-flip class */
+	.card-container:not(.manual-flip):hover .card,
+	.card-container.hover.manual-flip .card {
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+		-o-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+	}
 
-			/* do not roate if .manual-flip class */
-			.card-container:not(.manual-flip):hover .card,
-			.card-container.hover.manual-flip .card {
-				-webkit-transform: rotateY(180deg);
-				-moz-transform: rotateY(180deg);
-				-o-transform: rotateY(180deg);
-				transform: rotateY(180deg);
-			}
+	/* flip animation speed */
+	.card {
+		-webkit-transition: -webkit-transform 0.8s;
+		-moz-transition: -moz-transform 0.8s;
+		-o-transition: -o-transform 0.8s;
+		transition: transform 0.8s;
 
-			/* flip animation speed */
-			.card {
-				-webkit-transition: -webkit-transform 0.8s;
-				-moz-transition: -moz-transform 0.8s;
-				-o-transition: -o-transform 0.8s;
-				transition: transform 0.8s;
+		-webkit-transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
+		-o-transform-style: preserve-3d;
+		transform-style: preserve-3d;
 
-				-webkit-transform-style: preserve-3d;
-				-moz-transform-style: preserve-3d;
-				-o-transform-style: preserve-3d;
-				transform-style: preserve-3d;
+		position: relative;
+	}
 
-				position: relative;
-			}
+	/* hide back-side of card */
+	.card-front, .card-back {
+		-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+		-o-backface-visibility: hidden;
+		backface-visibility: hidden;
 
-			/* hide back-side of card */
-			.card-front, .card-back {
-				-webkit-backface-visibility: hidden;
-				-moz-backface-visibility: hidden;
-				-o-backface-visibility: hidden;
-				backface-visibility: hidden;
+		position: absolute !important;
+		background-color: #FFF;
+	}
 
-				position: absolute !important;
-				background-color: #FFF;
-			}
+	/* card-front placed above back */
+	.card-front { z-index: 2; }
 
-			/* card-front placed above back */
-			.card-front { z-index: 2; }
+	/* card-back initially hidden */
+	.card-back {
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+		-o-transform: rotateY(180deg);
+		transform: rotateY(180deg);
 
-			/* card-back initially hidden */
-			.card-back {
-				-webkit-transform: rotateY(180deg);
-				-moz-transform: rotateY(180deg);
-				-o-transform: rotateY(180deg);
-				transform: rotateY(180deg);
+		z-index: 3;
+	}
 
-				z-index: 3;
-			}
-
-			/* card height and width */
-			.card-container, .card-front, .card-back {
-				width: 100%;
-				height: 365px;
-			}
-
-
-		/* [[[ CARD STYLES ]]] */
-		.card, .card img {
-			border: 0px;
-			border-radius: 0;
-		}
-
-		.card h1 { font-size: 2em; }
-
-		.card-front .card-content-header { height: 100%; overflow: hidden; }
-
-		.card-content-main { padding: 10px; }
-
-		.card-front .card-content-main {
-			position: absolute;
-			top: 0%;
-			color: white;
-			text-shadow:-1px -1px 0 #000,
-						1px -1px 0 #000,
-						-1px 1px 0 #000,
-						1px 1px 0 #000;
-		}
-
-		.card-back .card-content-main {
-			height: 245px;
-		}
-
-		.card-content-footer {
-			position: absolute;
-			bottom: 3px;
-			right: -3px;
-			width: 100%;
-			background-color: #ADADAD;
-			border-radius: 100px 0 0 15px;
-			padding: 8px 110px 8px 30px;
-			text-align: right;
-			box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
-		}
-
-		.card-back .card-content-footer {
-			left: 0;
-			border-radius: 0 100px 15px 0;
-			padding: 3px 0 2px 5px;
-			margin-left: -3px;
-			text-align: left;
-		}
-
-		.dummy-spacer {
-			height: 167px;
-			width: 0px;
-			float: right;
-		}
-
-		.dummy-flip {
-			float: right;
-			clear: right;
-			height: 160px;
-			width: 75px;
-		}
-
-		.card-flip-btn {
-			position: absolute;
-			bottom: 25%;
-			right: 20px;
-
-			cursor: pointer;
-			color: white;
-			background-color: #F0AD4E;
-			border-radius: 50%;
-			padding: 10px 13px 10px 13px;
-			box-shadow: 0 3px 6px rgba(0, 0, 0, 0.75),
-						0 3px 6px rgba(0, 0, 0, 0.16),
-						0 0 0 5px rgba(255, 255, 255, 1);
-		}
-
-		.card-back .card-flip-btn { right: 14px }
-
-		.card-flip-btn p {
-			position: absolute;
-			top: 20%;
-			left: 20%;
-			font-size: 2em;
-			text-shadow: 1px 1px 0 #000,
-						-1px 1px 0 #000,
-						1px -1px 0 #000,
-						-1px -1px 0 #000,
-						0px 1px 0 #000,
-						0px -1px 0 #000,
-						-1px 0px 0 #000;
-		}
+	/* card height and width */
+	.card-container, .card-front, .card-back {
+		width: 100%;
+		height: 365px;
+	}
 
 
+
+	/* =============================
+		5.B =CARD STYLES
+	============================= */
+	.card, .card img {
+		border: 0;
+		border-radius: 0;
+	}
+
+	.card h1 { font-size: 2em; }
+
+	.card-front .card-content-header {
+		position: relative;
+		height: 100%;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	.card-content-header img {
+		position: absolute;
+		top: 	-9999px;
+		right:  -9999px;
+		bottom: -9999px;
+		left:  	-9999px;
+		margin: auto;
+	}
+
+	.card-content-main { padding: 10px; }
+
+	.card-front .card-content-main {
+		position: absolute;
+		top: 0%;
+		color: white;
+		text-shadow:-1px -1px 0 #000,
+					1px -1px 0 #000,
+					-1px 1px 0 #000,
+					1px 1px 0 #000;
+	}
+
+	.card-content-footer {
+		position: absolute;
+		bottom: 3px;
+		right: -3px;
+		width: 100%;
+		background-color: #ADADAD;
+		border-radius: 100px 0 0 15px;
+		padding: 8px 110px 8px 30px;
+		text-align: right;
+		box-shadow: 0 3px 5px 0 rgba(0,0,0,0.75);
+	}
+
+	.card-back .card-content-footer {
+		left: 0;
+		border-radius: 0 100px 15px 0;
+		padding: 3px 0 2px 5px;
+		margin-left: -3px;
+		text-align: left;
+	}
+
+
+
+	/* =============================
+		5.C =CARD FLIP BTN
+	============================= */
+
+	.dummy-spacer {
+		height: 167px;
+		width: 0;
+		float: right;
+	}
+
+	.dummy-flip {
+		float: right;
+		clear: right;
+		height: 160px;
+		width: 75px;
+	}
+
+	.card-flip-btn {
+		position: absolute;
+		bottom: 25%;
+		right: 20px;
+
+		cursor: pointer;
+		color: white;
+		background-color: #F0AD4E;
+		border-radius: 50%;
+		padding: 10px 14px 10px 14px;
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.75),
+					0 3px 6px rgba(0, 0, 0, 0.16),
+					0 1px 0 5px rgba(255, 255, 255, 1);
+	}
+
+	.card-back .card-flip-btn { right: 14px }
+
+	.card-flip-btn p {
+		position: absolute;
+		top: 20%;
+		left: 20%;
+		font-size: 2em;
+		text-shadow: 1px 1px 0 #000,
+					-1px 1px 0 #000,
+					1px -1px 0 #000,
+					-1px -1px 0 #000,
+					0 1px 0 #000,
+					0 -1px 0 #000,
+					-1px 0 0 #000;
+	}
+
+/* =============================
+	6. =CONTACT
+============================= */
+.contact {
+	background-color: #3696C9;
+	box-shadow: 0 -7px 10px -5px #333;
+	padding: 5em 1% 5em 1%;
+	color: #222;
+	overflow: hidden;
+}
+
+.contact h1 {
+	font-size: 3em;
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+.contact h2 { font-size: 1.5em; }
+
+.socials {
+	word-spacing: 2vw;
+}
+
+	/* =============================
+		6.A =FORM
+	============================= */
+	.form-fix { margin-bottom: 6%; }
+
+	.form-group {
+		display: flex;
+		margin-bottom: 25px;
+	}
+
+	label {
+		position: absolute;
+		transform: translate3d(14px, 6px, 0) scale(1);
+		transform-origin: left top;
+		transition: 240ms;
+		pointer-events: none; /* click through label */
+	}
+
+	.form-group.focused label {
+		transform: translate3d(6px, -20px, 0) scale(1);
+		background-color: rgba(2, 117, 216, 1);
+		border-radius: 10px 5%;
+		padding: 0 5px 0 5px;
+		box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
+		color: white;
+	}
+
+	.input:focus, textarea:focus {
+		transition: none;
+	}
+
+/* =============================
+	7. =FOOTER
+============================= */
+footer {
+	position: relative; /* fixes box-shadow */
+	background-color: #54AAD9;
+	padding: 0.25em 1% 0.25em 1%;
+	box-shadow: 0 -7px 10px -5px #333;
+	text-align: center;
+	color: #222;
+}
+
+footer h1 {
+	font-size: 1.25em;
+}
 
 /* =============================
 	SCROLLBARS
