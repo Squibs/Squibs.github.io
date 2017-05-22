@@ -1,15 +1,18 @@
 TODO:
 
-Section, Article tags
+Section and Article tags
 
 Re-write ABOUT content. Most of what is there atm is just temporary.
 	Add keywords/language employers would want to see.
 	Add actual photo of myself.
 	Find a way to make about section more interesting, black text on the dark blue doesn't really work.
 
-Better card styling; no idea what to do with white space on front and back of cards.
-	Limit card rows to two so that they all fit on one screen?
-		Figure out alternative for mobile.
+Card Improvements:
+	Better styles - not sure what to do really.
+	Carousel for more cards
+		1 card shown for mobile swipe left or right to view more
+		4 shown for medium left or right arrows to view more (or swipe)
+		6 shown for large left or right arrows to view more (or swipe)
 
 Own backend for contact form; currently using formspree
 	include email on side of contact me (example: https://codepen.io/daniloaquino/full/bqqKPZ/)

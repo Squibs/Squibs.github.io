@@ -1,43 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
-		<meta charset="utf-8">
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 		<title>Personal Portfolio</title>
 
-		<!-- further meta tags go here -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link rel="shortcut icon" href="favicon.ico"/>
 		<link rel="stylesheet" href="css/normalize.css"/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-		<link rel="stylesheet" type="text/css" href="css/main.css"/>
-		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/main.css"/>
 	</head>
 
 	<body data-spy="scroll" data-target="#navbarNav">
-		<header id="Home">
-			<div id="Nav-anchor"></div>
-			<nav class="navbar fixed-top navbar-toggleable-sm navbar-light" id="Nav">
 
-				<!-- mobile button for navbar collapse at medium breakpoint -->
+		<div class="backstretch"></div>
+
+		<header id="home">
+			<nav id="nav" class="navbar fixed-top navbar-toggleable-sm navbar-light">
+
+				<!-- mobile button for mobile/collapsed navbar -->
 				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
-				<!-- navbar items -->
-				<a class="navbar-brand" href="#Home">ZACHARY HOLMAN</a>
-				<div class="collapse navbar-collapse" id="navbarNav">
+				<!-- navbar links -->
+				<a class="navbar-brand" href="#home">Zachary Holman</a>
+				<div id="navbarNav" class="collapse navbar-collapse">
 					<ul class="navbar-nav">
-						<li class="nav-item"><a class="nav-link nav-home" href="#Home">Home</a></li>
-						<li class="nav-item"><a class="nav-link nav-about" href="#About">About Me</a></li>
-						<li class="nav-item"><a class="nav-link nav-projects" href="#Projects">Projects</a></li>
-						<li class="nav-item"><a class="nav-link nav-contact" href="#Contact">Contact Me</a></li>
-					</div>
+						<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+						<li class="nav-item"><a class="nav-link" href="#projects">My Projects</a></li>
+						<li class="nav-item"><a class="nav-link" href="#contact">Contact Me</a></li>
 				</div>
 			</nav>
-
-			<div class="backstretch"></div>
 
 			<div class="home">
 				<h1>Zachary Holman</h1>
@@ -46,419 +43,295 @@
 		</header>
 
 		<div class="container-fluid">
-			<div class="row">
-				<div class="about col-sm-12" id="About">
-					<h3>About Me</h3>
+			<div id="about" class="about row">
+				<div class="col-md-12">
+					<h1>About Me</h1>
+				</div>
+
+				<div class="col-lg-1"></div> <!-- padding -->
+
+				<!-- profile image -->
+				<div class="col-lg-3">
+					<div class="img-container">
+						<img src="img/image-squibs.png" class="img-fluid" alt="Profile picture for portfolio"/>
+					</div>
+				</div>
+
+				<div class="col-lg-7">
+					<h2>My name is Zachary,</h2>
+					<p>I am taking my beginning steps into learning more about web development, and learning more about myself along the way. I was born in California, but have lived almost all of my entire life in Colorado.</p> 
+					<p>The way I see it, any type of programming can be treated as a puzzle, which is why I am drawn to it as an interest; it allows for unique, creative, and many different types of solutions. Video games started off my interest in programming; always wanting to create my own one day and wanting to know exactly how they were made.</p>
+					<p>As time has passed, my programming interests have shifted, and web development is now a large interest of mine. I'm excited to learn more and create something that others, or even just one other person, will be able to use.</p>
+				</div>
+			</div> <!-- end #about .row -->
+
+			<div id="projects" class="projects row">
+				<div class="col-sm-12">
+					<h1>Projects</h1>
+				</div>
+
+				<div class="col-md-2 col-lg-1"></div> <!-- padding -->
+
+				<div class="deck-container col-md-8 col-lg-10">
 					<div class="row">
-						<div class="col-lg-2 col-md-2"></div>
-						<div class="col-lg-3 col-md-3">
-							<div class="img-container">
-								<img src="img/image-squibs.png" class="img-fluid img-circle">
+					<!-- learning to necro card -->
+						<div class="card-container manual-flip col-sm-12 col-lg-6 col-xl-4">
+							<div class="card">
+								<div class="card-front">
+									<div class="card-content-header">
+										<img class="card-img-top" src="img/screenshot-learning-to-necro.png" alt="Screenshot preview of Learning to Necro website." style="height: 365px;"/>
+									</div>
+									<div class="card-content-main">
+										<h1>Learning to Necro</h1>
+									</div>
+									<div class="card-content-footer">
+										<img src="img/icon-html5.svg" alt="HTML5 icon" width="21.5"/>
+										<img src="img/icon-css3.svg" alt="CSS3 icon" width="25"/>
+										<img src="img/icon-javascript.svg" alt="Javascript icon" width="25"/>
+										<img src="img/icon-jquery.svg" alt="jQuery icon" width="25"/>
+										<a onclick="rotateCard(this)"><div class="card-flip-btn"><p>Flip</p><i class="fa fa-undo fa-4x"></i></div></a>
+									</div>
+								</div>
+								<div class="card-back">
+									<div class="card-content-header">
+										<h1>Learning to Necro</h1>
+									</div>
+									<div class="card-content-main">
+										<div class="dummy-spacer"></div>
+										<div class="dummy-flip"></div>
+										<p>One of my first projects. Around the release of <em>Guild Wars 2</em>, I built this website as a way to learn more about html. While it may not serve a real purpose for players in the game today, I can look back at this being a first stepping stone into learning more about web development.</p>
+									</div>
+									<div class="card-content-footer">
+										<a href="http://learningtonecro.com/" class="btn btn-primary" target="_blank"><i class="fa fa-external-link"> View Site</i></a>
+										<a onclick="rotateCard(this)"><div class="card-flip-btn"><p>Flip</p><i class="fa fa-undo fa-4x"></i></div></a>
+									</div>
+								</div>
 							</div>
-						</div>
-						<div class="col-lg-5 col-md-5">
-							<h4><b>My name is Zachary,</b></h4>
-							<p>I am taking my beginning steps into learning more about web development, and learning more about myself along the way. I was born in California, but have lived almost all of my entire life in Colorado.</p> 
-							<p>The way I see it, any type of programming can be treated as a puzzle, which is why I am drawn to it as an interest; it allows for unique, creative, and many different types of solutions. Video games started off my interest in programming; always wanting to create my own one day and wanting to know exactly how they were made.</p>
-							<p>As time has passed, my programming interests have shifted, and web development is now a large interest of mine. I'm excited to learn more and create something that others, or even just one other person, will be able to use.</p>
-						</div>
+						</div> <!-- end learning to necro .card-container -->
+
+						<!-- tribute page card -->
+						<div class="card-container manual-flip col-sm-12 col-lg-6 col-xl-4">
+							<div class="card">
+								<div class="card-front">
+									<div class="card-content-header">
+										<img class="card-img-top" src="img/screenshot-tribute-page.png" alt="Screenshot preview of Tribute Page project." style="height: 365px;"/>
+									</div>
+									<div class="card-content-main">
+										<h1>Tribute Page</h1>
+									</div>
+									<div class="card-content-footer">
+										<img src="img/icon-html5.svg" alt="HTML5 icon" width="21.5"/>
+										<img src="img/icon-css3.svg" alt="CSS3 icon" width="25"/>
+										<img src="img/icon-bootstrap.svg" alt="BootStrap icon" width="25"/>
+										<a onclick="rotateCard(this)"><div class="card-flip-btn"><p>Flip</p><i class="fa fa-undo fa-4x"></i></div></a>
+									</div>
+								</div>
+								<div class="card-back">
+									<div class="card-content-header">
+										<h1>Tribute Page</h1>
+									</div>
+									<div class="card-content-main">
+										<div class="dummy-spacer"></div>
+										<div class="dummy-flip"></div>
+										<p>The first basic front end development project I created for <em>freeCodeCamp</em>. I made a tribute page to John M. Keynes a 20th century British economist.</p>
+									</div>
+									<div class="card-content-footer">
+										<a href="https://codepen.io/Sulph/full/XRavGG/" class="btn btn-primary" target="_blank"><i class="fa fa-codepen"></i> View Site</a>
+										<a onclick="rotateCard(this)"><div class="card-flip-btn"><p>Flip</p><i class="fa fa-undo fa-4x"></i></div></a>
+									</div>
+								</div>
+							</div>
+						</div> <!-- end tribute page .card-container -->
+
+						<!-- jquery playground card -->
+						<div class="card-container manual-flip col-sm-12 col-lg-6 col-xl-4">
+							<div class="card">
+								<div class="card-front">
+									<div class="card-content-header">
+										<img class="card-img-top" src="img/screenshot-jquery-playground.png" alt="Screenshot preview of jQuery Playground project." style="height: 365px;"/>
+									</div>
+									<div class="card-content-main">
+										<h1>jQuery Playground</h1>
+									</div>
+									<div class="card-content-footer">
+										<img src="img/icon-javascript.svg" alt="Javascript icon" width="25"/>
+										<img src="img/icon-jquery.svg" alt="jQuery icon" width="25"/>
+										<a onclick="rotateCard(this)"><div class="card-flip-btn"><p>Flip</p><i class="fa fa-undo fa-4x"></i></div></a>
+									</div>
+								</div>
+								<div class="card-back">
+									<div class="card-content-header">
+										<h1>jQuery Playground</h1>
+									</div>
+									<div class="card-content-main">
+										<div class="dummy-spacer"></div>
+										<div class="dummy-flip"></div>
+										<p>A playground used in several freeCodeCamp challenges teaching about how to use various jQuery commands. While this is not very much of a project to show off, I believe it is a good thing to recognize a simple project that allows you to test the many functions of jQuery.</p>
+									</div>
+									<div class="card-content-footer">
+										<a href="https://codepen.io/Sulph/pen/aWEyaK" class="btn btn-primary" target="_blank"><i class="fa fa-codepen"></i> View Site</a>
+										<a onclick="rotateCard(this)"><div class="card-flip-btn"><p>Flip</p><i class="fa fa-undo fa-4x"></i></div></a>
+									</div>
+								</div>
+							</div>
+						</div> <!-- end jquery playground .card-container -->
+
+						<!-- cat photo app card -->
+						<div class="card-container manual-flip col-sm-12 col-lg-6 col-xl-4">
+							<div class="card">
+								<div class="card-front">
+									<div class="card-content-header">
+										<img class="card-img-top" src="img/screenshot-cat-photo-app.png" alt="Screenshot preview of Cat Photo App project." style="height: 365px;"/>
+									</div>
+									<div class="card-content-main">
+										<h1>Cat Photo App</h1>
+									</div>
+									<div class="card-content-footer">
+										<img src="img/icon-html5.svg" alt="HTML5 icon" width="21.5"/>
+										<img src="img/icon-css3.svg" alt="CSS3 icon" width="25"/>
+										<img src="img/icon-bootstrap.svg" alt="BootStrap icon" width="25"/>
+										<a onclick="rotateCard(this)"><div class="card-flip-btn"><p>Flip</p><i class="fa fa-undo fa-4x"></i></div></a>
+									</div>
+								</div>
+								<div class="card-back">
+									<div class="card-content-header">
+										<h1>Cat Photo App</h1>
+									</div>
+									<div class="card-content-main">
+										<div class="dummy-spacer"></div>
+										<div class="dummy-flip"></div>
+										<p>Simple starting project. Teachings of responsive design were made as well as the basic foundations of html, css, and bootstrap were taught in this lesson/project. This was made to fit the size of a fairly small screen-sized phone.</p>
+									</div>
+									<div class="card-content-footer">
+										<a href="https://codepen.io/Sulph/pen/qmPGwq" class="btn btn-primary" target="_blank"><i class="fa fa-codepen"></i> View Site</a>
+										<a onclick="rotateCard(this)"><div class="card-flip-btn"><p>Flip</p><i class="fa fa-undo fa-4x"></i></div></a>
+									</div>
+								</div>
+							</div>
+						</div> <!-- end cat photo app .card-container -->
+
+						<!-- template card -->
+						<div class="card-container manual-flip col-sm-12 col-lg-6 col-xl-4">
+							<div class="card">
+								<div class="card-front">
+									<div class="card-content-header">
+										<img class="card-img-top" src="img/image-coming-soon.png" alt="Template picture alt text." style="height: 365px;"/>
+									</div>
+									<div class="card-content-main">
+										<h1>Template Title</h1>
+									</div>
+									<div class="card-content-footer">
+										<img src="img/icon-html5.svg" alt="HTML5 icon" width="21.5"/>
+										<img src="img/icon-css3.svg" alt="CSS3 icon" width="25"/>
+										<img src="img/icon-javascript.svg" alt="Javascript icon" width="25"/>
+										<img src="img/icon-bootstrap.svg" alt="BootStrap icon" width="25"/>
+										<img src="img/icon-jquery.svg" alt="jQuery icon" width="25"/>
+										<a onclick="rotateCard(this)"><div class="card-flip-btn"><p>Flip</p><i class="fa fa-undo fa-4x"></i></div></a>
+									</div>
+								</div>
+								<div class="card-back">
+									<div class="card-content-header">
+										<h1>Template Title</h1>
+									</div>
+									<div class="card-content-main">
+										<div class="dummy-spacer"></div>
+										<div class="dummy-flip"></div>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vulputate mauris eget lectus blandit mattis. In mollis turpis at sodales fringilla. Quisque vitae mi non ipsum ornare cursus eget sed tortor. Morbi pretium feugiat scelerisque. Mauris aliquam id lorem ac tristique.</p>
+									</div>
+									<div class="card-content-footer">
+										<a href="#" class="btn btn-primary">Button</a>
+										<a onclick="rotateCard(this)"><div class="card-flip-btn"><p>Flip</p><i class="fa fa-undo fa-4x"></i></div></a>
+									</div>
+								</div>
+							</div>
+						</div> <!-- end template card .card-container -->
+
+						<!-- template card -->
+						<div class="card-container manual-flip col-sm-12 col-lg-6 col-xl-4">
+							<div class="card">
+								<div class="card-front">
+									<div class="card-content-header">
+										<img class="card-img-top" src="img/image-coming-soon.png" alt="Template picture alt text." style="height: 365px;"/>
+									</div>
+									<div class="card-content-main">
+										<h1>Template Title</h1>
+									</div>
+									<div class="card-content-footer">
+										<img src="img/icon-html5.svg" alt="HTML5 icon" width="21.5"/>
+										<img src="img/icon-css3.svg" alt="CSS3 icon" width="25"/>
+										<img src="img/icon-javascript.svg" alt="Javascript icon" width="25"/>
+										<img src="img/icon-bootstrap.svg" alt="BootStrap icon" width="25"/>
+										<img src="img/icon-jquery.svg" alt="jQuery icon" width="25"/>
+										<a onclick="rotateCard(this)"><div class="card-flip-btn"><p>Flip</p><i class="fa fa-undo fa-4x"></i></div></a>
+									</div>
+								</div>
+								<div class="card-back">
+									<div class="card-content-header">
+										<h1>Template Title</h1>
+									</div>
+									<div class="card-content-main">
+										<div class="dummy-spacer"></div>
+										<div class="dummy-flip"></div>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vulputate mauris eget lectus blandit mattis. In mollis turpis at sodales fringilla. Quisque vitae mi non ipsum ornare cursus eget sed tortor. Morbi pretium feugiat scelerisque. Mauris aliquam id lorem ac tristique.</p>
+									</div>
+									<div class="card-content-footer">
+										<a href="#" class="btn btn-primary">Button</a>
+										<a onclick="rotateCard(this)"><div class="card-flip-btn"><p>Flip</p><i class="fa fa-undo fa-4x"></i></div></a>
+									</div>
+								</div>
+							</div>
+						</div> <!-- end template card .card-container -->
 					</div>
-				</div> <!-- end #About .col -->
-			</div> <!-- end #About .row -->
+				</div>
+			</div> <!-- end #projects .row -->
 
-			<div class="row">
-				<div class="projects col-sm-12" id="Projects">
-					<h3 class="project-fix">Projects</h3>
-					<div class="container">
-						<div class="row">
+			<div id="contact" class="contact row">
+				<div class="col-sm-12">
+					<h1>Contact Me</h1>
+				</div>
 
-							<!-- Learning to Necro card -->
-							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
-								<div class="card-container manual-flip"> <!-- remove manual-flip for cursor hover flip -->
-									<div class="card">
+				<div class="col-lg-1"></div> <!-- padding -->
 
-										<div class="card-front">
-											<div class="card-image">
-												<img class="card-img-top img-fluid" src="img/screenshot-learning-to-necro-block.png" alt="Screenshot preview of Learning to Necro website.">
-											</div>
-											<div class="card-content">
-												<div class="card-content-main">
-													<h4>Learning to Necro</h4>
-												</div>
-												<div class="card-content-footer">
-													<img src="img/icon-html5.svg" alt="HTML5 icon" width="21.5">
-													<img src="img/icon-css3.svg" alt="CSS3 icon" width="25">
-													<img src="img/icon-javascript.svg" alt="Javascript icon" width="25">
-													<img src="img/icon-jquery.svg" alt="jQuery icon" width="25">
-													<a onclick="rotateCard(this)"><div class="card-flip-btn"><p class="btn-txt">Flip</p><i class="fa fa-undo"></i></div></a>
-												</div>
-											</div>
-										</div> <!-- end front panel -->
+				<div class="col-lg-5 form-fix">
+					<h2>Feel free to send me a message!</h2>
+					<p>Interesting in learning more about anything you see here or about other things I'm involved in? Check out my social media links below, or get in contact with me by sending a message. I would love to hear about anything you have to say!</p>
 
-										<div class="card-back">
-											<div class="card-content">
-												<div class="card-content-main">
-													<h4>Learning to Necro</h4>
-													<p>One of my first projects. Around the release of <em>Guild Wars 2</em>, I built this website as a way to learn more about html. While it may not serve a real purpose for players in the game today, I can look back at this being a first stepping stone into learning more about web development.</p>
-												</div>
-												<div class="card-content-footer">
-													<a href="http://learningtonecro.com/" class="btn btn-primary" target="_blank"><i class="fa fa-external-link"> View Site</i></a>
-													<a onclick="rotateCard(this)"><div class="card-flip-btn"><p class="btn-txt">Flip</p><i class="fa fa-undo"></i></div></a>
-												</div>
-											</div>
-										</div> <!-- end back panel -->
-									</div>
-								</div>
-							</div> <!-- end Learning to Necro Card card -->
+					<span class="socials">
+						<a href="https://www.freecodecamp.com/squibs" target="_blank"><span class="fa-stack fa-lg fa-2x"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-free-code-camp fa-stack-1x fa-inverse"></i></span></a>
 
-							<!-- Tribute Page card -->
-							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
-								<div class="card-container manual-flip">
-									<div class="card">
+						<a href="https://github.com/Squibs" target="_blank"><span class="fa-stack fa-lg fa-2x"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-github fa-stack-1x fa-inverse"></i></span></a>
 
-										<div class="card-front">
-											<img class="card-img-top img-fluid" src="img/screenshot-tribute-page-block.png" alt="Screenshot preview of Tribute Page project.">
-											<div class="card-content">
-												<div class="card-content-main">
-													<h4>Tribute Page</h4>
-												</div>
-												<div class="card-content-footer">
-													<img src="img/icon-html5.svg" alt="HTML5 icon" width="21.5">
-													<img src="img/icon-css3.svg" alt="CSS3 icon" width="25">
-													<img src="img/icon-bootstrap.svg" alt="BootStrap icon" width="25">
-													<a onclick="rotateCard(this)"><div class="card-flip-btn"><p class="btn-txt">Flip</p><i class="fa fa-undo"></i></div></a>
-												</div>
-											</div>
-										</div> <!-- end front panel -->
+						<a href="http://codepen.io/Sulph/" target="_blank"><span class="fa-stack fa-lg fa-2x"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-codepen fa-stack-1x fa-inverse"></i></span></a>
 
-										<div class="card-back">
-											<div class="card-content">
-												<div class="card-content-main">
-													<h4>Tribute Page</h4>
-													<p>The first basic front end development project I created for <em>freeCodeCamp</em>. I made a tribute page to John M. Keynes a 20th century British economist.</p>
-												</div>
-												<div class="card-content-footer">
-													<a href="https://codepen.io/Sulph/full/XRavGG/" class="btn btn-primary" target="_blank"><i class="fa fa-codepen"></i> View Site</a>
-													<a onclick="rotateCard(this)"><div class="card-flip-btn"><p class="btn-txt">Flip</p><i class="fa fa-undo"></i></div></a>
-												</div>
-											</div>
-										</div> <!-- end back panel -->
-									</div>
-								</div>
-							</div> <!-- end Tribute Page card -->
+						<a href="https://www.youtube.com/channel/UCa0bxvZBPXMjHTH3xe6AoKw" target="_blank"><span class="fa-stack fa-lg fa-2x"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-youtube fa-stack-1x fa-inverse"></i></span></a>
 
-							<!-- jQuery Playground card -->
-							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
-								<div class="card-container manual-flip">
-									<div class="card">
+						<a href="https://twitter.com/SquibsVids" target="_blank"><span class="fa-stack fa-lg fa-2x"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></a>
+					</span>
+				</div>
 
-										<div class="card-front">
-											<img class="card-img-top img-fluid" src="img/screenshot-jquery-playground-block.png" alt="Screenshot of jQuery playground project.">
-											<div class="card-content">
-												<div class="card-content-main">
-													<h4>jQuery Playground</h4>
-												</div>
-												<div class="card-content-footer">
-													<img src="img/icon-javascript.svg" alt="Javascript icon" width="25">
-													<img src="img/icon-jquery.svg" alt="jQuery icon" width="25">
-													<a onclick="rotateCard(this)"><div class="card-flip-btn"><p class="btn-txt">Flip</p><i class="fa fa-undo"></i></div></a>
-												</div>
-											</div>
-										</div> <!-- end front panel -->
-
-										<div class="card-back">
-											<div class="card-content">
-												<div class="card-content-main">
-													<h4>jQuery Playground</h4>
-													<p>A playground used in several freeCodeCamp challenges teaching about how to use various jQuery commands. While this is not very much of a project to show off, I believe it is a good thing to recognize a simple project that allows you to test the many functions of jQuery.</p>
-												</div>
-												<div class="card-content-footer">
-													<a href="https://codepen.io/Sulph/pen/aWEyaK" class="btn btn-primary" target="_blank"><i class="fa fa-codepen"></i> View Site</a>
-													<a onclick="rotateCard(this)"><div class="card-flip-btn"><p class="btn-txt">Flip</p><i class="fa fa-undo"></i></div></a>
-												</div>
-											</div>
-										</div> <!-- end back panel -->
-									</div>
-								</div>
-							</div> <!-- end jQuery Playground card -->
-
-							<!-- Cat Photo App card -->
-							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
-								<div class="card-container manual-flip">
-									<div class="card">
-
-										<div class="card-front">
-											<img class="card-img-top img-fluid" src="img/screenshot-cat-photo-app-block.png" alt="Screenshot of Cat Photo App project.">
-											<div class="card-content">
-												<div class="card-content-main">
-													<h4>Cat Photo App</h4>
-												</div>
-												<div class="card-content-footer">
-													<img src="img/icon-html5.svg" alt="HTML5 icon" width="21.5">
-													<img src="img/icon-css3.svg" alt="CSS3 icon" width="25">
-													<img src="img/icon-bootstrap.svg" alt="BootStrap icon" width="25">
-													<a onclick="rotateCard(this)"><div class="card-flip-btn"><p class="btn-txt">Flip</p><i class="fa fa-undo"></i></div></a>
-												</div>
-											</div>
-										</div> <!-- end front panel -->
-
-										<div class="card-back">
-											<div class="card-content">
-												<div class="card-content-main">
-													<h4>Cat Photo App</h4>
-													<p>Simple starting project. Teachings of responsive design were made as well as the basic foundations of html, css, and bootstrap were taught in this lesson/project. This was made to fit the size of a fairly small screen-sized phone.</p>
-												</div>
-												<div class="card-content-footer">
-													<a href="https://codepen.io/Sulph/pen/qmPGwq" class="btn btn-primary" target="_blank"><i class="fa fa-codepen"></i> View Site</a>
-													<a onclick="rotateCard(this)"><div class="card-flip-btn"><p class="btn-txt">Flip</p><i class="fa fa-undo"></i></div></a>
-												</div>
-											</div>
-										</div> <!-- end back panel -->
-									</div>
-								</div>
-							</div> <!-- end Cat Photo App card -->
-
-							<!-- Template card -->
-							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
-								<div class="card-container manual-flip">
-									<div class="card">
-
-										<div class="card-front">
-											<img class="card-img-top img-fluid" src="img/image-coming-soon.png" alt="Template picture alt text">
-											<div class="card-content">
-												<div class="card-content-main">
-													<h4>Template Title</h4>
-												</div>
-												<div class="card-content-footer">
-													<img src="img/icon-html5.svg" alt="HTML5 icon" width="21.5">
-													<img src="img/icon-css3.svg" alt="CSS3 icon" width="25">
-													<img src="img/icon-javascript.svg" alt="Javascript icon" width="25">
-													<img src="img/icon-bootstrap.svg" alt="BootStrap icon" width="25">
-													<img src="img/icon-jquery.svg" alt="jQuery icon" width="25">
-													<a onclick="rotateCard(this)"><div class="card-flip-btn"><p class="btn-txt">Flip</p><i class="fa fa-undo"></i></div></a>
-												</div>
-											</div>
-										</div> <!-- end front panel -->
-
-										<div class="card-back">
-											<div class="card-content">
-												<div class="card-content-main">
-													<h4>Template Title</h4>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vulputate mauris eget lectus blandit mattis. In mollis turpis at sodales fringilla. Quisque vitae mi non ipsum ornare cursus eget sed tortor. Morbi pretium feugiat scelerisque. Mauris aliquam id lorem ac tristique.</p>
-												</div>
-												<div class="card-content-footer">
-													<a href="#" class="btn btn-primary">Button</a>
-													<a onclick="rotateCard(this)"><div class="card-flip-btn"><p class="btn-txt">Flip</p><i class="fa fa-undo"></i></div></a>
-												</div>
-											</div>
-										</div> <!-- end back panel -->
-									</div>
-								</div>
-							</div> <!-- end Template card -->
-
-							<!-- Template card -->
-							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
-								<div class="card-container manual-flip">
-									<div class="card">
-
-										<div class="card-front">
-											<img class="card-img-top img-fluid" src="img/image-coming-soon.png" alt="Template picture alt text">
-											<div class="card-content">
-												<div class="card-content-main">
-													<h4>Template Title</h4>
-												</div>
-												<div class="card-content-footer">
-													<img src="img/icon-html5.svg" alt="HTML5 icon" width="21.5">
-													<img src="img/icon-css3.svg" alt="CSS3 icon" width="25">
-													<img src="img/icon-javascript.svg" alt="Javascript icon" width="25">
-													<img src="img/icon-bootstrap.svg" alt="BootStrap icon" width="25">
-													<img src="img/icon-jquery.svg" alt="jQuery icon" width="25">
-													<a onclick="rotateCard(this)"><div class="card-flip-btn"><p class="btn-txt">Flip</p><i class="fa fa-undo"></i></div></a>
-												</div>
-											</div>
-										</div> <!-- end front panel -->
-
-										<div class="card-back">
-											<div class="card-content">
-												<div class="card-content-main">
-													<h4>Template Title</h4>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vulputate mauris eget lectus blandit mattis. In mollis turpis at sodales fringilla. Quisque vitae mi non ipsum ornare cursus eget sed tortor. Morbi pretium feugiat scelerisque. Mauris aliquam id lorem ac tristique.</p>
-												</div>
-												<div class="card-content-footer">
-													<a href="#" class="btn btn-primary">Button</a>
-													<a onclick="rotateCard(this)"><div class="card-flip-btn"><p class="btn-txt">Flip</p><i class="fa fa-undo"></i></div></a>
-												</div>
-											</div>
-										</div> <!-- end back panel -->
-									</div>
-								</div>
-							</div> <!-- end Template card -->
-
-							<!-- Template card -->
-							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
-								<div class="card-container manual-flip">
-									<div class="card">
-
-										<div class="card-front">
-											<img class="card-img-top img-fluid" src="img/image-coming-soon.png" alt="Template picture alt text">
-											<div class="card-content">
-												<div class="card-content-main">
-													<h4>Template Title</h4>
-												</div>
-												<div class="card-content-footer">
-													<img src="img/icon-html5.svg" alt="HTML5 icon" width="21.5">
-													<img src="img/icon-css3.svg" alt="CSS3 icon" width="25">
-													<img src="img/icon-javascript.svg" alt="Javascript icon" width="25">
-													<img src="img/icon-bootstrap.svg" alt="BootStrap icon" width="25">
-													<img src="img/icon-jquery.svg" alt="jQuery icon" width="25">
-													<a onclick="rotateCard(this)"><div class="card-flip-btn"><p class="btn-txt">Flip</p><i class="fa fa-undo"></i></div></a>
-												</div>
-											</div>
-										</div> <!-- end front panel -->
-
-										<div class="card-back">
-											<div class="card-content">
-												<div class="card-content-main">
-													<h4>Template Title</h4>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vulputate mauris eget lectus blandit mattis. In mollis turpis at sodales fringilla. Quisque vitae mi non ipsum ornare cursus eget sed tortor. Morbi pretium feugiat scelerisque. Mauris aliquam id lorem ac tristique.</p>
-												</div>
-												<div class="card-content-footer">
-													<a href="#" class="btn btn-primary">Button</a>
-													<a onclick="rotateCard(this)"><div class="card-flip-btn"><p class="btn-txt">Flip</p><i class="fa fa-undo"></i></div></a>
-												</div>
-											</div>
-										</div> <!-- end back panel -->
-									</div>
-								</div>
-							</div> <!-- end Template card -->
-
-							<!-- Template card -->
-							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
-								<div class="card-container manual-flip">
-									<div class="card">
-
-										<div class="card-front">
-											<img class="card-img-top img-fluid" src="img/image-coming-soon.png" alt="Template picture alt text">
-											<div class="card-content">
-												<div class="card-content-main">
-													<h4>Template Title</h4>
-												</div>
-												<div class="card-content-footer">
-													<img src="img/icon-html5.svg" alt="HTML5 icon" width="21.5">
-													<img src="img/icon-css3.svg" alt="CSS3 icon" width="25">
-													<img src="img/icon-javascript.svg" alt="Javascript icon" width="25">
-													<img src="img/icon-bootstrap.svg" alt="BootStrap icon" width="25">
-													<img src="img/icon-jquery.svg" alt="jQuery icon" width="25">
-													<a onclick="rotateCard(this)"><div class="card-flip-btn"><p class="btn-txt">Flip</p><i class="fa fa-undo"></i></div></a>
-												</div>
-											</div>
-										</div> <!-- end front panel -->
-
-										<div class="card-back">
-											<div class="card-content">
-												<div class="card-content-main">
-													<h4>Template Title</h4>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vulputate mauris eget lectus blandit mattis. In mollis turpis at sodales fringilla. Quisque vitae mi non ipsum ornare cursus eget sed tortor. Morbi pretium feugiat scelerisque. Mauris aliquam id lorem ac tristique.</p>
-												</div>
-												<div class="card-content-footer">
-													<a href="#" class="btn btn-primary">Button</a>
-													<a onclick="rotateCard(this)"><div class="card-flip-btn"><p class="btn-txt">Flip</p><i class="fa fa-undo"></i></div></a>
-												</div>
-											</div>
-										</div> <!-- end back panel -->
-									</div>
-								</div>
-							</div> <!-- end Template card -->
-
-							<!-- Template card -->
-							<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-4">
-								<div class="card-container manual-flip">
-									<div class="card">
-
-										<div class="card-front">
-											<img class="card-img-top img-fluid" src="img/image-coming-soon.png" alt="Template picture alt text">
-											<div class="card-content">
-												<div class="card-content-main">
-													<h4>Template Title</h4>
-												</div>
-												<div class="card-content-footer">
-													<img src="img/icon-html5.svg" alt="HTML5 icon" width="21.5">
-													<img src="img/icon-css3.svg" alt="CSS3 icon" width="25">
-													<img src="img/icon-javascript.svg" alt="Javascript icon" width="25">
-													<img src="img/icon-bootstrap.svg" alt="BootStrap icon" width="25">
-													<img src="img/icon-jquery.svg" alt="jQuery icon" width="25">
-													<a onclick="rotateCard(this)"><div class="card-flip-btn"><p class="btn-txt">Flip</p><i class="fa fa-undo"></i></div></a>
-												</div>
-											</div>
-										</div> <!-- end front panel -->
-
-										<div class="card-back">
-											<div class="card-content">
-												<div class="card-content-main">
-													<h4>Template Title</h4>
-													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vulputate mauris eget lectus blandit mattis. In mollis turpis at sodales fringilla. Quisque vitae mi non ipsum ornare cursus eget sed tortor. Morbi pretium feugiat scelerisque. Mauris aliquam id lorem ac tristique.</p>
-												</div>
-												<div class="card-content-footer">
-													<a href="#" class="btn btn-primary">Button</a>
-													<a onclick="rotateCard(this)"><div class="card-flip-btn"><p class="btn-txt">Flip</p><i class="fa fa-undo"></i></div></a>
-												</div>
-											</div>
-										</div> <!-- end back panel -->
-									</div>
-								</div>
-							</div> <!-- end Template card -->
-
-						</div> <!-- end row -->
-					</div> <!-- end container -->
-				</div> <!-- end #Projects .col -->
-			</div> <!-- end #Projects .row -->
-
-			<div class="row">
-				<div class="contact col-sm-12" id="Contact">
-					<h3>Contact Me</h3>
-					<div class="row">
-						<div class="col-lg-2 col-md-2"></div>
-						<div class="col-lg-4 col-md-4 form-fix">
-							<h4>Feel free to send me a message</h4>
-							<p>Interesting in learning more about anything you see here or about other things I'm involved in? Check out my social media links below, or get in contact with me by sending a message. I would love to hear about anything you have to say!</p>
-
-							<span class="socials">
-								<a href="https://www.freecodecamp.com/squibs" target="_blank"><span class="fa-stack fa-lg fa-2x"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-free-code-camp fa-stack-1x fa-inverse"></i></span></a>
-
-								<a href="https://github.com/Squibs" target="_blank"><span class="fa-stack fa-lg fa-2x"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-github fa-stack-1x fa-inverse"></i></span></a>
-
-								<a href="http://codepen.io/Sulph/" target="_blank"><span class="fa-stack fa-lg fa-2x"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-codepen fa-stack-1x fa-inverse"></i></span></a>
-
-								<a href="https://www.youtube.com/channel/UCa0bxvZBPXMjHTH3xe6AoKw" target="_blank"><span class="fa-stack fa-lg fa-2x"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-youtube fa-stack-1x fa-inverse"></i></span></a>
-
-								<a href="https://twitter.com/SquibsVids" target="_blank"><span class="fa-stack fa-lg fa-2x"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></a>
-							</span>
+				<!-- contact me form -->
+				<div class="col-lg-5">
+					<form id="form" class="form responsive-form" method="POST" >
+						<div class="form-group">
+							<label for="name">Your Name:</label>
+							<input type="text" class="form-control" name="name" required/>
 						</div>
-
-						<!-- Contact Me Form -->
-						<div class="col-lg-4 col-md-4">
-							<form class="form responsive-form" method="POST" id="ContactForm">
-								<div class="form-group">
-									<label for="name">Your Name:</label>
-									<input type="text" class="form-control" name="name" required/>
-								</div>
-								<div class="form-group">
-									<label for="email">Your Email:</label>
-									<input type="email" class="form-control" name="_replyto" required/>
-								</div>
-								<div class="form-group">
-									<label for="message">Message to send to me:</label>
-									<textarea class="form-control" name="message" rows="6" maxlength="2000" required></textarea/>
-								</div>
-								<input type="text" name="_gotcha" style="display: none" />
-								<input type="hidden" name="_subject" value="My GitHub Hosted Portfolio - Contact Form"/>
-								<button type="submit" class="btn btn-primary btn"><i class="fa fa-paper-plane"></i> Send</button>
-							</form>
+						<div class="form-group">
+							<label for="email">Your Email:</label>
+							<input type="email" class="form-control" name="_replyto" required/>
 						</div>
-					</div>
-				</div> <!-- end #Contact .col -->
-			</div> <!-- end #Contact .row -->
-		</div> <!-- end container-fluid -->
+						<div class="form-group">
+							<label for="message">Message to send to me:</label>
+							<textarea class="form-control" name="message" rows="6" maxlength="2000" required></textarea/>
+						</div>
+						<input type="text" name="_gotcha" style="display: none" />
+						<input type="hidden" name="_subject" value="My GitHub Hosted Portfolio - Contact Form"/>
+						<button type="submit" class="btn btn-primary btn"><i class="fa fa-paper-plane"></i> Send</button>
+					</form>
+				</div>
+			</div> <!-- end #contact .row -->
+
+		</div> <!-- end .container-fluid -->
 
 		<!-- load jquery before bootstrap -->
 		<script src="js/jquery-3.2.1.min.js"></script>
@@ -469,7 +342,7 @@
 	</body>
 
 	<footer>
-		<h5>&copy; 2017 Zachary Holman</h5>
+		<h1>&copy; 2017 Zachary Holman</h1>
 		<p>Created for the <a href="https://www.freecodecamp.com/">freeCodeCamp</a> portfolio challenge. Background-image by <a href="http://jovicasmileski.deviantart.com/art/Flat-Landscape-Winter-Edition-576667116">"Jovica Smileski."</a></p>
 	</footer>
 </html>
