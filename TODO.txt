@@ -16,3 +16,10 @@ Card Improvements:
 
 Own backend for contact form; currently using formspree
 	include email on side of contact me (example: https://codepen.io/daniloaquino/full/bqqKPZ/)
+
+
+
+
+Inspiration:
+	https://codepen.io/daniloaquino/full/bqqKPZ - Initial Inspiration
+	https://nawazishali.github.io/ - inspiration for the future when I return to this project.
