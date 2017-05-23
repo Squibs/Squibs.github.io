@@ -17,7 +17,8 @@ Card Improvements:
 Own backend for contact form; currently using formspree
 	include email on side of contact me (example: https://codepen.io/daniloaquino/full/bqqKPZ/)
 
-
+Smooth scroll for Nav links.
+	Full-vh home with down-arrow nav at bottom of page anchor with smooth scroll to about me
 
 
 Inspiration:
