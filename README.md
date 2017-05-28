@@ -7,7 +7,7 @@ My GitHub userpage. This will be hosting my portfolio with links to project page
 
 Created for the second basic front end development project from freeCodeCamp. I created a portfolio for myself to feature projects and let people know a little about myself. It includes a contact form which can send an email to me directly from the web page itself using formspree. There are many improvements I can still yet make, and those will come later once I learn more.
 
-<img src="img/icon-html5.svg" height="40" alt="HTML5 Icon"/>   <img src="img/icon-css3.svg" height="40" alt="CSS3 Icon"/>   <img src="img/icon-bootstrap.svg" height="40" alt="Bootstrap Icon"/>   <img src="img/icon-jquery.svg" height="40" alt="jQuery Icon"/>   <img src="img/icon-javascript.svg" height="40" alt="JavaScript Icon"/>
+<img src="https://cdn.rawgit.com/Squibs/Squibs.github.io/1bdd9917/img/icon-html5.svg" height="40" alt="HTML5 Icon"/>   <img src="https://cdn.rawgit.com/Squibs/Squibs.github.io/1bdd9917/img/icon-css3.svg" height="40" alt="CSS3 Icon"/>   <img src="https://cdn.rawgit.com/Squibs/Squibs.github.io/1bdd9917/img/icon-bootstrap.svg" height="40" alt="Bootstrap Icon"/>   <img src="https://cdn.rawgit.com/Squibs/Squibs.github.io/master/img/icon-jquery.svg" height="40" alt="jQuery Icon"/>   <img src="https://cdn.rawgit.com/Squibs/Squibs.github.io/master/img/icon-javascript.svg" height="40" alt="JavaScript Icon"/>
 
 ---
 
